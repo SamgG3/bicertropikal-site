@@ -702,6 +702,7 @@ function bindPageEvents() {
 }
 
 function bindGlobalEvents() {
+  setTimeout(() => document.querySelector(".intro-screen")?.classList.add("intro-done"), 3800);
   document.querySelector(".menu-toggle").addEventListener("click", (event) => {
     const open = document.querySelector("#navLinks").classList.toggle("open");
     event.currentTarget.setAttribute("aria-expanded", String(open));

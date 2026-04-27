@@ -77,6 +77,11 @@ body.search-active {
   z-index: 200;
 }
 
+.intro-screen.intro-done {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .intro-emblem {
   animation: introPop 0.72s ease both;
   height: 118px;
@@ -1318,8 +1323,11 @@ p {
     transition-duration: 0.01ms !important;
   }
 
-  .intro-screen {
-    display: none;
+  .intro-screen,
+  .intro-emblem,
+  .intro-brand,
+  .intro-tagline {
+    animation: none !important;
   }
 }
 
