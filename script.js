@@ -242,7 +242,7 @@ function home() {
         </div>
       </div>
       <div class="hero-showcase">
-        <img src="assets/bicer-tropikal-logo.jpeg" alt="Biçer Tropikal logosu" loading="eager" />
+        <img src="assets/bicer-tropikal-logo-horizontal.png" alt="Biçer Tropikal logosu" loading="eager" />
       </div>
     </section>
 
@@ -281,7 +281,7 @@ function home() {
     </section>
 
     <section class="section compact-section founder">
-      <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo.jpeg" alt="Biçer Tropikal" loading="lazy" /></div>
+      <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo-horizontal.png" alt="Biçer Tropikal" loading="lazy" /></div>
       <div>
         <p class="eyebrow">Hakkımızda</p>
         <h2>Toprağın cömertliği, güneşin sıcaklığı ve seçilmiş tropikal lezzetler.</h2>
@@ -370,7 +370,7 @@ function about() {
   return `
     ${pageHero("Hakkımızda", brandDescription)}
     <section class="section founder">
-      <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo.jpeg" alt="Biçer Tropikal" loading="lazy" /></div>
+      <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo-horizontal.png" alt="Biçer Tropikal" loading="lazy" /></div>
       <div><p class="eyebrow">Marka hikayesi</p><h2>Doğallık, güven ve kalite.</h2><p>${brandDescription}</p><p>Biçer Tropikal samimi ama premium, bilgilendirici ama sade bir marka tonu benimser.</p></div>
     </section>
   `;
