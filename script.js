@@ -248,8 +248,7 @@ const app = document.querySelector("#main");
 const navLinks = document.querySelectorAll(".nav-links a");
 let state = {
   lang: localStorage.getItem("bt-lang") || "tr",
-  products: fruits,
-  messages: JSON.parse(localStorage.getItem("bt-messages") || "[]")
+  products: fruits
 };
 
 function t(tr, en) {
@@ -418,6 +417,7 @@ function renderCatalog() {
 function productDetail(id) {
   const fruit = state.products.find((item) => item.id === id) || state.products[0];
   const similar = state.products.filter((item) => item.id !== fruit.id && (item.category === fruit.category || item.taste === fruit.taste)).slice(0, 3);
+  const nutrition = nutritionProfile(fruit);
   return `
     ${pageHero(fruit.name, fruit.desc, `Ürünlerimiz / ${fruit.name}`)}
     <section class="section detail-layout">
@@ -436,7 +436,7 @@ function productDetail(id) {
         ${infoBlock("Olgunlaşma süreci", "Koku, kabuk rengi, parlaklık ve hafif yumuşama olgunluk için takip edilebilir.")}
         ${infoBlock("Tarif önerileri", `${fruit.name} kahvaltı kaseleri, ferah içecekler ve premium sunum tabaklarında değerlendirilebilir.`)}
         <h3>Besin profili</h3>
-        <div class="nutrition"><div><strong>Enerji</strong><br>Orta</div><div><strong>Lif</strong><br>Dengeli</div><div><strong>Aroma</strong><br>${fruit.taste}</div></div>
+        <div class="nutrition"><div><strong>Öne çıkan</strong><br>${nutrition.highlight}</div><div><strong>Lif / yapı</strong><br>${nutrition.fiber}</div><div><strong>Kullanım</strong><br>${nutrition.note}</div></div>
       </div>
     </section>
     <section class="section">
@@ -445,6 +445,15 @@ function productDetail(id) {
     </section>
     ${faqSection()}
   `;
+}
+
+function nutritionProfile(fruit) {
+  if (fruit.category === "Vitamin C") return { highlight: "C vitamini", fiber: "Sulu narenciye", note: "İçecek ve ferah tüketim" };
+  if (fruit.name === "Avokado") return { highlight: "Sağlıklı yağ", fiber: "Kremamsı yapı", note: "Salata ve kahvaltı" };
+  if (fruit.name.includes("Yaban")) return { highlight: "Antioksidan", fiber: "Küçük taneli", note: "Kase ve tatlı" };
+  if (fruit.name.includes("Ejder")) return { highlight: "Su oranı", fiber: "Ferah doku", note: "Sunum ve tabak" };
+  if (fruit.name === "Nar") return { highlight: "Polifenol", fiber: "Taneli yapı", note: "Paket ve sunum" };
+  return { highlight: "Doğal aroma", fiber: "Dengeli yapı", note: fruit.use };
 }
 
 function infoBlock(title, text) {
@@ -501,8 +510,8 @@ function contactPage(corporate = false) {
         <article class="info-card">
           <h3>WhatsApp iletişim hatları</h3>
           <div class="contact-actions">
-            <a class="btn primary" href="https://wa.me/905537230927" target="_blank" rel="noreferrer">WhatsApp İletişim 1</a>
-            <a class="btn ghost" href="https://wa.me/905464414136" target="_blank" rel="noreferrer">WhatsApp İletişim 2</a>
+            <a class="btn primary" href="https://wa.me/905537230927?text=Merhaba%2C%20Bi%C3%A7er%20Tropikal%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer">WhatsApp İletişim 1</a>
+            <a class="btn ghost" href="https://wa.me/905464414136?text=Merhaba%2C%20Bi%C3%A7er%20Tropikal%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer">WhatsApp İletişim 2</a>
           </div>
         </article>
       </div>
@@ -513,9 +522,9 @@ function contactPage(corporate = false) {
         <div class="field"><label for="message">Mesaj</label><textarea id="message" name="message" required></textarea></div>
         <label class="consent-check">
           <input type="checkbox" name="consent" required />
-          <span>Bilgilerimin yalnızca iletişim talebime dönüş yapılması amacıyla kullanılacağını ve üçüncü kişilerle paylaşılmayacağını kabul ediyorum.</span>
+          <span><a href="#/legal/kvkk">KVKK Aydınlatma Metni</a> ve <a href="#/legal/privacy">Gizlilik Politikası</a> kapsamında, bilgilerimin WhatsApp üzerinden iletişim talebime dönüş yapılması amacıyla kullanılacağını kabul ediyorum.</span>
         </label>
-        <button class="btn primary" type="submit">Mesaj Gönder</button>
+        <button class="btn primary" type="submit">WhatsApp'a Yönlendir</button>
         <p id="formStatus" role="status"></p>
       </form>
     </section>
@@ -524,7 +533,29 @@ function contactPage(corporate = false) {
 
 function legalPage(type) {
   const titles = { privacy: "Gizlilik Politikası", kvkk: "KVKK Aydınlatma Metni", cookies: "Çerez Politikası", terms: "Kullanım Koşulları" };
-  return `${pageHero(titles[type] || "Hukuki", "Biçer Tropikal bilgi platformu için sade hukuki bilgilendirme metni.")}<section class="section"><article class="info-card"><h2>${titles[type]}</h2><p>Bu demo metin, yayına alınmadan önce marka danışmanı veya hukuk danışmanı tarafından kontrol edilmelidir. Site ödeme, üyelik, kargo, adres veya kart bilgisi toplamaz. İletişim formu yalnızca ad soyad, e-posta, telefon ve mesaj alanlarından oluşur.</p><p>Çerez tercihleri kullanıcı tarafından kabul veya ret seçenekleriyle yönetilebilir.</p></article></section>`;
+  const legalCopy = {
+    privacy: [
+      "Biçer Tropikal, ziyaretçilerin gizliliğine önem verir. Site; ödeme, üyelik, sepet, kargo, adres veya kart bilgisi toplamaz.",
+      "İletişim formu gönderildiğinde bilgiler site içinde saklanmaz; kullanıcı, doldurduğu mesaj içeriğiyle WhatsApp uygulamasına yönlendirilir ve gönderimi kendi onayıyla tamamlar.",
+      "E-posta adresi yalnızca kullanıcıların kendi tercihleriyle doğrudan iletişim kurabilmesi için paylaşılmıştır."
+    ],
+    kvkk: [
+      "İletişim amacıyla paylaşılan ad soyad, e-posta, telefon ve mesaj bilgileri yalnızca talebe dönüş yapılması amacıyla kullanılabilir.",
+      "Form üzerinden bilgiler otomatik olarak Biçer Tropikal sunucularında saklanmaz. WhatsApp yönlendirmesinde mesaj içeriği kullanıcı tarafından görüntülenir ve kullanıcı onayıyla gönderilir.",
+      "Kullanıcılar iletişim talepleriyle ilgili bilgi almak için bicertropikal@gmail.com adresinden markaya ulaşabilir."
+    ],
+    cookies: [
+      "Site, temel tercihleri hatırlamak için yerel tarayıcı depolama alanını kullanabilir. Örneğin tema, dil ve çerez tercihi bu kapsamda saklanabilir.",
+      "Çerez onayı kabul veya ret seçenekleriyle kullanıcı tarafından yönetilir. Ödeme, reklam takibi veya üyelik çerezi kullanılmaz."
+    ],
+    terms: [
+      "Biçer Tropikal sitesi satış sitesi değildir; tanıtım, katalog, meyve kutusu bilgisi ve kurumsal talep yönlendirmesi sunar.",
+      "Ürün bilgileri bilgilendirme amaçlıdır. Görseller, fiyatlandırma ve stok detayları admin paneli ve gerçek ürün içerikleri tamamlandığında güncellenebilir.",
+      "Site içeriğinin izinsiz kopyalanması, marka adı ve görsellerinin yetkisiz kullanımı uygun değildir."
+    ]
+  };
+  const paragraphs = legalCopy[type] || legalCopy.privacy;
+  return `${pageHero(titles[type] || "Hukuki", "Biçer Tropikal bilgi platformu için hukuki bilgilendirme metni.")}<section class="section"><article class="info-card legal-copy"><h2>${titles[type]}</h2>${paragraphs.map((text) => `<p>${text}</p>`).join("")}</article></section>`;
 }
 
 function emptySearch() {
@@ -547,7 +578,7 @@ function renderAdmin(tab = 0) {
     `<table><thead><tr><th>Kategori</th><th>Ürün sayısı</th></tr></thead><tbody>${[...new Set(state.products.map((f) => f.category))].map((c) => `<tr><td>${c}</td><td>${state.products.filter((f) => f.category === c).length}</td></tr>`).join("")}</tbody></table>`,
     `<table><thead><tr><th>Başlık</th><th>Etiket</th></tr></thead><tbody>${posts.map((p) => `<tr><td>${p[0]}</td><td>${p[2]}</td></tr>`).join("")}</tbody></table>`,
     `<div class="grid four">${state.products.slice(0, 8).map((f) => `<div class="gallery-tile">${f.icon}</div>`).join("")}</div>`,
-    `<table><thead><tr><th>Ad</th><th>E-posta</th><th>Telefon</th><th>Mesaj</th></tr></thead><tbody>${state.messages.map((m) => `<tr><td>${m.name}</td><td>${m.email}</td><td>${m.phone}</td><td>${m.message}</td></tr>`).join("") || `<tr><td colspan="4">Henüz mesaj yok.</td></tr>`}</tbody></table>`
+    `<table><thead><tr><th>Form mesajları</th></tr></thead><tbody><tr><td>Form mesajları site içinde saklanmaz; kullanıcı WhatsApp'a yönlendirilir.</td></tr></tbody></table>`
   ];
   content.innerHTML = views[tab];
 }
@@ -596,10 +627,17 @@ function bindPageEvents() {
   if (form) form.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
-    state.messages.push(data);
-    localStorage.setItem("bt-messages", JSON.stringify(state.messages));
-    form.reset();
-    document.querySelector("#formStatus").textContent = "Mesajınız kaydedildi. Teşekkürler.";
+    const message = [
+      "Merhaba, Biçer Tropikal hakkında bilgi almak istiyorum.",
+      "",
+      `Ad Soyad: ${data.name || ""}`,
+      `E-posta: ${data.email || ""}`,
+      `Telefon: ${data.phone || ""}`,
+      `Mesaj: ${data.message || ""}`
+    ].join("\n");
+    const url = `https://wa.me/905537230927?text=${encodeURIComponent(message)}`;
+    document.querySelector("#formStatus").textContent = "WhatsApp açılıyor. Mesajı kontrol edip gönderimi siz tamamlayabilirsiniz.";
+    window.open(url, "_blank", "noopener,noreferrer");
   });
   const adminLogin = document.querySelector("#adminLogin");
   if (adminLogin) adminLogin.addEventListener("submit", (event) => {

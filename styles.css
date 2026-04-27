@@ -1045,6 +1045,16 @@ p {
   width: 18px;
 }
 
+.consent-check a {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.legal-copy p {
+  font-size: 1rem;
+  max-width: 860px;
+}
+
 .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.62);
