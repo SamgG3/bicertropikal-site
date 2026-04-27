@@ -218,7 +218,7 @@ const fruits = [
 ];
 
 const boxes = [
-  ["Ekonomik Paket", "Tropikal keşfe dengeli ve pratik başlangıç.", "Ejder meyvesi, avokado, altın çilek, yaban mersini", "Ekonomik"],
+  ["Ekonomik Paket", "Tropikal keşfe dengeli ve pratik başlangıç.", "Ejder meyvesi, avokado, altın çilek, yaban mersini", "Ekonomik", "assets/ekonomik-paket-box.jpeg"],
   ["Sevdiğine Gönder", "Hediye hissi güçlü, renkli ve özenli seçki.", "Yaban mersini, altın çilek, kumkat, ejder meyvesi, mango, pamelo", "Hediye", "assets/sevdigine-gonder-box.jpeg"],
   ["Geniş Aile", "Kalabalık sofralar için zengin ve paylaşılabilir paket.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado, muz", "Aile", "assets/genis-aile-box.jpeg"],
   ["Bizim Aile", "Günlük tüketim ve aile paylaşımı için dengeli içerik.", "Kumkat, mango, altın çilek, yaban mersini, ejder meyvesi", "Aile", "assets/bizim-aile-box.jpeg"],
@@ -269,9 +269,9 @@ function breadcrumb(items) {
   return `<div class="breadcrumb"><a href="#/">Biçer Tropikal</a> / ${items.join(" / ")}</div>`;
 }
 
-function pageHero(title, text, crumb = title) {
+function pageHero(title, text, crumb = title, className = "") {
   document.title = `${title} | Biçer Tropikal`;
-  return `<section class="page-hero">${breadcrumb([crumb])}<p class="eyebrow">Biçer Tropikal</p><h1>${title}</h1>${String(text).split("\n\n").map((paragraph) => `<p>${paragraph}</p>`).join("")}</section>`;
+  return `<section class="page-hero ${className}">${breadcrumb([crumb])}<p class="eyebrow">Biçer Tropikal</p><h1>${title}</h1>${String(text).split("\n\n").map((paragraph) => `<p>${paragraph}</p>`).join("")}</section>`;
 }
 
 function stars() {
@@ -470,7 +470,7 @@ function infoBlock(title, text) {
 
 function about() {
   return `
-    ${pageHero("Hakkımızda", aboutHeroDescription)}
+    ${pageHero("Hakkımızda", aboutHeroDescription, "Hakkımızda", "about-page-hero")}
     <section class="section founder">
       <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo-horizontal.png" alt="Biçer Tropikal" loading="lazy" /></div>
       <div><p class="eyebrow">Marka hikayesi</p><h2>Doğallık, güven ve kalite.</h2><p>${brandDescription}</p><p>Biçer Tropikal samimi ama premium, bilgilendirici ama sade bir marka tonu benimser.</p></div>
