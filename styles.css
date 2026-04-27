@@ -574,6 +574,37 @@ p {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.product-meta {
+  align-items: center;
+  color: var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  margin: 14px 0;
+}
+
+.product-meta span {
+  background: rgba(255, 167, 38, 0.16);
+  border: 1px solid rgba(255, 167, 38, 0.32);
+  border-radius: 999px;
+  color: var(--ink);
+  padding: 4px 9px;
+}
+
+.card-actions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 14px;
+}
+
+.card-actions .btn {
+  justify-content: center;
+  padding-inline: 12px;
+}
+
 .fruit-art {
   align-items: center;
   aspect-ratio: 1.45;
@@ -1027,6 +1058,48 @@ p {
   gap: 10px;
 }
 
+.box-builder {
+  display: grid;
+  gap: 18px;
+}
+
+.builder-products {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.builder-option {
+  align-items: flex-start;
+  background: color-mix(in srgb, var(--cream) 68%, var(--white));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: auto 1fr;
+  padding: 12px;
+}
+
+.builder-option input {
+  margin-top: 4px;
+}
+
+.builder-option span,
+.builder-option small {
+  grid-column: 2;
+}
+
+.builder-option span {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.builder-option small {
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .consent-check {
   align-items: flex-start;
   color: var(--muted);
@@ -1352,7 +1425,18 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .builder-products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .cookie-banner {
     right: 18px;
+  }
+}
+
+@media (max-width: 620px) {
+  .builder-products,
+  .card-actions {
+    grid-template-columns: 1fr;
   }
 }

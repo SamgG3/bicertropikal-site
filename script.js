@@ -242,6 +242,7 @@ const recipes = [
 ];
 
 const brandDescription = "Biçer Tropikal, toprağın cömertliğini, güneşin sıcaklığını ve eşsiz lezzetleri sofralarınıza taşıma misyonuyla yola çıkmış bir firmadır. Kuruluşumuzdan bu yana, dünyanın dört bir yanındaki en kaliteli ve en taze tropikal meyveleri titizlikle seçerek, modern ve hijyenik koşullarda işleyip sizlere ulaştırmanın gururunu yaşıyoruz.";
+const aboutHeroDescription = "1957 yılında temelleri atılan Biçer Tropikal, doğallığı ve kaliteyi merkezine alarak tropikal meyve sektöründe köklü bir yolculuğa başlamıştır. Kurulduğu ilk günden bu yana tazelik, güven ve müşteri memnuniyetini ilke edinen firmamız; yılların verdiği tecrübe ile ürün çeşitliliğini ve hizmet kalitesini sürekli geliştirmektedir.\n\nBiçer Tropikal olarak, dünyanın en verimli topraklarında yetişen özenle seçilmiş tropikal meyveleri, en doğal haliyle sofralarınıza ulaştırıyoruz. Üretimden tüketime kadar geçen tüm süreçlerde hijyen, kalite kontrol ve sürdürülebilirlik standartlarına büyük önem veriyoruz.\n\nGelenekten aldığımız güç ile modern teknolojiyi birleştirerek; hem yerel hem de ulusal pazarda güvenilir bir marka olmayı başardık. Müşterilerimize sadece ürün değil, aynı zamanda sağlıklı ve lezzetli bir yaşam deneyimi sunmayı hedefliyoruz.\n\nBugün, 1957'den bu yana süregelen kalite anlayışımızla Biçer Tropikal, doğanın en özel lezzetlerini sizlerle buluşturmaya devam ediyor.";
 const localAdminHosts = ["", "localhost", "127.0.0.1", "::1"];
 
 const app = document.querySelector("#main");
@@ -270,7 +271,7 @@ function breadcrumb(items) {
 
 function pageHero(title, text, crumb = title) {
   document.title = `${title} | Biçer Tropikal`;
-  return `<section class="page-hero">${breadcrumb([crumb])}<p class="eyebrow">Biçer Tropikal</p><h1>${title}</h1><p>${text}</p></section>`;
+  return `<section class="page-hero">${breadcrumb([crumb])}<p class="eyebrow">Biçer Tropikal</p><h1>${title}</h1>${String(text).split("\n\n").map((paragraph) => `<p>${paragraph}</p>`).join("")}</section>`;
 }
 
 function stars() {
@@ -286,11 +287,15 @@ function fruitCard(fruit) {
       <h3>${fruit.name}</h3>
       ${stars()}
       <p>${fruit.desc}</p>
+      <div class="product-meta"><strong>Fiyat:</strong> 0 TL <span>Stokta yok</span></div>
       <div class="tags">
         <span class="tag">${fruit.taste}</span>
         <span class="tag">${fruit.use}</span>
       </div>
-      <a class="btn ghost card-btn" href="#/product/${fruit.id}">Detaylı İncele</a>
+      <div class="card-actions">
+        <a class="btn ghost card-btn" href="#/product/${fruit.id}">Detaylı İncele</a>
+        <a class="btn primary card-btn" href="#/boxes">Kutu Oluştur</a>
+      </div>
     </article>
   `;
 }
@@ -322,12 +327,19 @@ function home() {
         <p>${brandDescription}</p>
         <div class="hero-actions">
           <a class="btn primary" href="#/catalog">Ürünleri İncele</a>
-          <a class="btn ghost" href="#/corporate">Kurumsal Talep</a>
+          <a class="btn ghost" href="#/contact">İletişim</a>
         </div>
       </div>
       <div class="hero-showcase">
         <img src="assets/tropical-gift-basket.jpeg" alt="Tropikal meyve hediye paketi" loading="eager" />
       </div>
+    </section>
+
+    <section class="section compact-section">
+      <div class="section-head">
+        <div><p class="eyebrow">Öne çıkan ürünler</p><h2>Vitrinin favorileri</h2></div>
+      </div>
+      <div class="grid four">${state.products.slice(0, 6).map(fruitCard).join("")}</div>
     </section>
 
     <section class="section compact-section">
@@ -338,20 +350,13 @@ function home() {
       <div class="category-grid">${categories.map((item) => categoryCard(item[0], item[1])).join("")}</div>
     </section>
 
-    <section class="section compact-section">
-      <div class="section-head">
-        <div><p class="eyebrow">Öne çıkan ürünler</p><h2>Vitrinin favorileri</h2></div>
-      </div>
-      <div class="grid four">${state.products.slice(0, 6).map(fruitCard).join("")}</div>
-    </section>
-
     <section class="market-band">
       <div>
         <p class="eyebrow">Toptan ve kurumsal bilgi</p>
         <h2>Otel, restoran, kafe ve özel sunumlar için bilgi talebi alınır.</h2>
-        <p>Bu platform satış sitesi değildir; ürün kataloğu, bilgilendirme ve kurumsal talep akışı için hazırlanmıştır.</p>
+        <p>Bu platform satış sitesi değildir; ürün kataloğu, bilgilendirme ve WhatsApp iletişim akışı için hazırlanmıştır.</p>
       </div>
-      <a class="btn secondary" href="#/corporate">Talep Formu</a>
+      <a class="btn secondary" href="#/contact">İletişime Geç</a>
     </section>
 
     <section class="section compact-section">
@@ -360,7 +365,7 @@ function home() {
     </section>
 
     <section class="section compact-section">
-      <div class="section-head"><div><p class="eyebrow">Meyve kutuları</p><h2>Seçki fikirleri</h2></div></div>
+      <div class="section-head"><div><h2>Meyve kutuları</h2></div></div>
       <div class="grid three">${boxes.map(boxCard).join("")}</div>
     </section>
 
@@ -377,7 +382,7 @@ function home() {
 }
 
 function boxCard(box) {
-  return `<article class="box-card"><span class="tag">${box[3]}</span><h3>${box[0]}</h3><p>${box[1]}</p><p><strong>İçerik:</strong> ${box[2]}</p><a class="small-link" href="#/boxes">Bilgi Al</a></article>`;
+  return `<article class="box-card"><span class="tag">${box[3]}</span><h3>${box[0]}</h3><p>${box[1]}</p><p><strong>İçerik:</strong> ${box[2]}</p><div class="product-meta"><strong>Fiyat:</strong> 0 TL <span>Stokta yok</span></div><a class="small-link" href="https://wa.me/905537230927?text=${encodeURIComponent(`Merhaba, ${box[0]} hakkında bilgi almak istiyorum. İçerik: ${box[2]}`)}" target="_blank" rel="noreferrer">WhatsApp ile Sor</a></article>`;
 }
 
 function catalog() {
@@ -427,7 +432,9 @@ function productDetail(id) {
         <h2>${fruit.name}</h2>
         ${stars()}
         <p>${fruit.desc}</p>
+        <div class="product-meta"><strong>Fiyat:</strong> 0 TL <span>Stokta yok</span></div>
         <div class="tags"><span class="tag">${fruit.taste}</span><span class="tag">${fruit.use}</span><span class="tag">${fruit.season}</span></div>
+        <a class="btn primary" href="#/boxes">Bu ürünle kutu oluştur</a>
       </div>
       <div class="detail-panel">
         <h2>Ürün Bilgisi</h2>
@@ -462,7 +469,7 @@ function infoBlock(title, text) {
 
 function about() {
   return `
-    ${pageHero("Hakkımızda", brandDescription)}
+    ${pageHero("Hakkımızda", aboutHeroDescription)}
     <section class="section founder">
       <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo-horizontal.png" alt="Biçer Tropikal" loading="lazy" /></div>
       <div><p class="eyebrow">Marka hikayesi</p><h2>Doğallık, güven ve kalite.</h2><p>${brandDescription}</p><p>Biçer Tropikal samimi ama premium, bilgilendirici ama sade bir marka tonu benimser.</p></div>
@@ -471,7 +478,24 @@ function about() {
 }
 
 function boxesPage() {
-  return `${pageHero("Meyve Kutuları", "Satış akışı olmayan, kurumsal ve kişisel keşiflere fikir veren tropikal seçki önerileri.")}<section class="section"><div class="grid three">${boxes.map(boxCard).join("")}</div></section>`;
+  return `
+    ${pageHero("Meyve Kutuları", "Tekli satış yerine meyve kutusu oluşturma mantığıyla hazırlanan Biçer Tropikal seçkileri. Fiyatlar şimdilik 0 TL ve stok durumu stokta yok olarak gösterilir.")}
+    <section class="section">
+      <div class="section-head"><div><h2>Meyve kutuları</h2></div></div>
+      <div class="grid three">${boxes.map(boxCard).join("")}</div>
+    </section>
+    <section class="section box-builder-section">
+      <div class="section-head"><div><p class="eyebrow">Kendi seçkini hazırla</p><h2>Meyve kutusu oluştur</h2></div></div>
+      <form class="form-card box-builder" id="boxBuilderForm">
+        <div class="builder-products">
+          ${state.products.map((fruit) => `<label class="builder-option"><input type="checkbox" name="fruits" value="${fruit.name}" /><span>${fruit.name}</span><small>0 TL · Stokta yok</small></label>`).join("")}
+        </div>
+        <div class="field"><label for="boxNote">Notunuz</label><textarea id="boxNote" name="note" placeholder="Özel istek, adet veya teslimat dışı notunuzu yazabilirsiniz."></textarea></div>
+        <button class="btn primary" type="submit">WhatsApp ile Kutu Talebi Gönder</button>
+        <p id="boxBuilderStatus" role="status"></p>
+      </form>
+    </section>
+  `;
 }
 
 function guidePage() {
@@ -490,7 +514,7 @@ function faqSection() {
   const faqs = [
     ["Bu site satış yapıyor mu?", "Hayır. Biçer Tropikal bir tanıtım, katalog ve bilgi platformudur."],
     ["Ödeme, sepet veya üyelik var mı?", "Hayır. Ödeme, üyelik, sepet, kargo, adres veya kart bilgisi alınmaz."],
-    ["Kurumsal talep nasıl iletilir?", "Kurumsal talep formundan ad, e-posta, telefon ve mesaj bilgisiyle iletişim başlatılabilir."],
+    ["Kutu veya kurumsal bilgi nasıl alınır?", "İletişim sayfasındaki WhatsApp yönlendirmesiyle bireysel veya kurumsal bilgi talebi başlatılabilir."],
     ["Görseller değiştirilebilir mi?", "Evet. Tüm ürün görsel alanları sonradan gerçek ürün fotoğraflarıyla güncellenebilir."]
   ];
   return `<section class="section"><div class="section-head"><div><p class="eyebrow">SSS</p><h2>Sık sorulan sorular</h2></div></div>${faqs.map((f) => `<div class="faq-item"><button type="button">${f[0]} <span>+</span></button><p>${f[1]}</p></div>`).join("")}</section>`;
@@ -502,7 +526,7 @@ function galleryPage() {
 
 function contactPage(corporate = false) {
   return `
-    ${pageHero(corporate ? "Kurumsal Talep" : "İletişim", corporate ? "Otel, restoran, kafe ve kurumsal iş birlikleri için talep formu." : "Sorularınız ve iş birliği talepleriniz için bize yazın.")}
+    ${pageHero("İletişim", "Bireysel bilgi, meyve kutusu ve kurumsal talepleriniz için WhatsApp üzerinden bize ulaşabilirsiniz.")}
     <section class="section contact-grid">
       <div>
         ${infoBlock("Güvenli iletişim", "Bu form adres, ödeme, kart veya üyelik bilgisi istemez. Bilgiler yalnızca talebinize dönüş yapmak için kullanılır.")}
@@ -510,8 +534,8 @@ function contactPage(corporate = false) {
         <article class="info-card">
           <h3>WhatsApp iletişim hatları</h3>
           <div class="contact-actions">
-            <a class="btn primary" href="https://wa.me/905537230927?text=Merhaba%2C%20Bi%C3%A7er%20Tropikal%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer">WhatsApp İletişim 1</a>
-            <a class="btn ghost" href="https://wa.me/905464414136?text=Merhaba%2C%20Bi%C3%A7er%20Tropikal%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer">WhatsApp İletişim 2</a>
+            <a class="btn primary" href="https://wa.me/905537230927?text=Merhaba%2C%20Bi%C3%A7er%20Tropikal%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer">WhatsApp 1</a>
+            <a class="btn primary" href="https://wa.me/905464414136?text=Merhaba%2C%20Bi%C3%A7er%20Tropikal%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer">WhatsApp 2</a>
           </div>
         </article>
       </div>
@@ -549,7 +573,7 @@ function legalPage(type) {
       "Çerez onayı kabul veya ret seçenekleriyle kullanıcı tarafından yönetilir. Ödeme, reklam takibi veya üyelik çerezi kullanılmaz."
     ],
     terms: [
-      "Biçer Tropikal sitesi satış sitesi değildir; tanıtım, katalog, meyve kutusu bilgisi ve kurumsal talep yönlendirmesi sunar.",
+      "Biçer Tropikal sitesi satış sitesi değildir; tanıtım, katalog, meyve kutusu bilgisi ve WhatsApp iletişim yönlendirmesi sunar.",
       "Ürün bilgileri bilgilendirme amaçlıdır. Görseller, fiyatlandırma ve stok detayları admin paneli ve gerçek ürün içerikleri tamamlandığında güncellenebilir.",
       "Site içeriğinin izinsiz kopyalanması, marka adı ve görsellerinin yetkisiz kullanımı uygun değildir."
     ]
@@ -638,6 +662,26 @@ function bindPageEvents() {
     const url = `https://wa.me/905537230927?text=${encodeURIComponent(message)}`;
     document.querySelector("#formStatus").textContent = "WhatsApp açılıyor. Mesajı kontrol edip gönderimi siz tamamlayabilirsiniz.";
     window.open(url, "_blank", "noopener,noreferrer");
+  });
+  const boxBuilder = document.querySelector("#boxBuilderForm");
+  if (boxBuilder) boxBuilder.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const selected = [...boxBuilder.querySelectorAll("input[name='fruits']:checked")].map((input) => input.value);
+    const note = new FormData(boxBuilder).get("note") || "";
+    if (!selected.length) {
+      document.querySelector("#boxBuilderStatus").textContent = "Lütfen kutuya eklemek için en az bir meyve seçin.";
+      return;
+    }
+    const message = [
+      "Merhaba, Biçer Tropikal için meyve kutusu oluşturmak istiyorum.",
+      "",
+      `Seçilen meyveler: ${selected.join(", ")}`,
+      "Fiyat: 0 TL",
+      "Stok durumu: Stokta yok",
+      `Not: ${note}`
+    ].join("\n");
+    document.querySelector("#boxBuilderStatus").textContent = "WhatsApp açılıyor. Kutunuzu kontrol edip mesajı gönderebilirsiniz.";
+    window.open(`https://wa.me/905537230927?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   });
   const adminLogin = document.querySelector("#adminLogin");
   if (adminLogin) adminLogin.addEventListener("submit", (event) => {
