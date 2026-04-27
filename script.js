@@ -219,11 +219,11 @@ const fruits = [
 
 const boxes = [
   ["Ekonomik Paket", "Tropikal keşfe dengeli ve pratik başlangıç.", "Ejder meyvesi, avokado, altın çilek, yaban mersini", "Ekonomik"],
-  ["Sevdiğine Gönder", "Hediye hissi güçlü, renkli ve özenli seçki.", "Yaban mersini, altın çilek, kumkat, ejder meyvesi, mango, pamelo", "Hediye"],
-  ["Geniş Aile", "Kalabalık sofralar için zengin ve paylaşılabilir paket.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado, muz", "Aile"],
-  ["Bizim Aile", "Günlük tüketim ve aile paylaşımı için dengeli içerik.", "Kumkat, mango, altın çilek, yaban mersini, ejder meyvesi", "Aile"],
-  ["Mega", "Yoğun ürün çeşitliliğiyle premium vitrin paketi.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado", "Mega"],
-  ["Vitamin C", "Narenciye ağırlıklı ferah ve canlı seçki.", "Portakal, mandalina, limon, kumkat, greyfurt", "Vitamin"],
+  ["Sevdiğine Gönder", "Hediye hissi güçlü, renkli ve özenli seçki.", "Yaban mersini, altın çilek, kumkat, ejder meyvesi, mango, pamelo", "Hediye", "assets/sevdigine-gonder-box.jpeg"],
+  ["Geniş Aile", "Kalabalık sofralar için zengin ve paylaşılabilir paket.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado, muz", "Aile", "assets/genis-aile-box.jpeg"],
+  ["Bizim Aile", "Günlük tüketim ve aile paylaşımı için dengeli içerik.", "Kumkat, mango, altın çilek, yaban mersini, ejder meyvesi", "Aile", "assets/bizim-aile-box.jpeg"],
+  ["Mega", "Yoğun ürün çeşitliliğiyle premium vitrin paketi.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado", "Mega", "assets/mega-paket-box.jpeg"],
+  ["Vitamin C", "Narenciye ağırlıklı ferah ve canlı seçki.", "Portakal, mandalina, limon, kumkat, greyfurt", "Vitamin", "assets/vitamin-c-box.jpeg"],
   ["Business", "Kurumsal sunumlar için dengeli ve prestijli paket.", "Yaban mersini, altın çilek, ejder meyvesi, mango, avokado, kumkat", "Kurumsal", "assets/business-box.jpeg"]
 ];
 
