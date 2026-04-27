@@ -1,39 +1,158 @@
 const fruits = [
-  { id: "mango", name: "Mango", icon: "Mango", category: "Tropikal Klasikler", taste: "Tatlı", use: "Tatlılar", season: "Yaz", popular: 98, storage: "Oda sıcaklığında olgunlaştır, kesildikten sonra buzdolabında sakla.", desc: "Yoğun aromalı, lifli ve güneşli bir tropikal lezzet." },
-  { id: "dragon-fruit", name: "Dragon Fruit", icon: "Dragon Fruit", category: "Egzotik", taste: "Hafif", use: "Sunum", season: "Yıl boyu", popular: 91, storage: "Buzdolabında 4-5 gün taze kalır.", desc: "Canlı görüntüsü ve ferah aromasıyla tabaklara premium bir dokunuş katar." },
-  { id: "papaya", name: "Papaya", icon: "Papaya", category: "Tropikal Klasikler", taste: "Tatlı", use: "Kahvaltı", season: "Yaz", popular: 86, storage: "Olgunlaşana kadar dışarıda, sonra buzdolabında.", desc: "Yumuşak dokulu, aromatik ve sindirimi destekleyen zarif bir meyve." },
-  { id: "passion-fruit", name: "Passion Fruit", icon: "Passion Fruit", category: "Aromatik", taste: "Ekşi", use: "İçecek", season: "İlkbahar", popular: 93, storage: "Kırışık kabuk aromanın yoğunlaştığını gösterir.", desc: "Keskin kokulu, tatlı-ekşi dengesi yüksek bir aroma kaynağı." },
-  { id: "guava", name: "Guava", icon: "Guava", category: "Aromatik", taste: "Tatlı", use: "Atıştırmalık", season: "Sonbahar", popular: 78, storage: "Olgun guava buzdolabında kısa süre saklanmalıdır.", desc: "Çiçeksi kokusu ve pembe iç dokusuyla farklı bir deneyim sunar." },
-  { id: "ananas", name: "Ananas", icon: "Ananas", category: "Tropikal Klasikler", taste: "Tatlı", use: "Smoothie", season: "Yıl boyu", popular: 96, storage: "Bütün halde serin yerde, dilimlenmiş halde kapalı kapta.", desc: "Sulu, parlak ve ferahlatıcı tropikal meyve standardı." },
-  { id: "avokado", name: "Avokado", icon: "Avokado", category: "Besleyici", taste: "Kremamsı", use: "Salata", season: "Kış", popular: 88, storage: "Olgunlaşınca buzdolabına alın, limonla kararmayı yavaşlatın.", desc: "Kremamsı dokusu ve sağlıklı yağ profiliyle sofraların dengeli üyesi." },
-  { id: "rambutan", name: "Rambutan", icon: "Rambutan", category: "Egzotik", taste: "Tatlı", use: "Sunum", season: "Yaz", popular: 74, storage: "Nemini koruyarak buzdolabında saklayın.", desc: "Dışı gösterişli, içi sulu ve litchi benzeri zarif aromalı." },
-  { id: "mangosteen", name: "Mangosteen", icon: "Mangosteen", category: "Premium", taste: "Tatlı", use: "Atıştırmalık", season: "Yaz", popular: 82, storage: "Serin ve kuru yerde kısa süre bekletilebilir.", desc: "Beyaz dilimli iç yapısı ve dengeli aromasıyla premium seçki meyvesi." },
-  { id: "hindistan-cevizi", name: "Hindistan Cevizi", icon: "Hindistan Cevizi", category: "Besleyici", taste: "Hafif", use: "İçecek", season: "Yıl boyu", popular: 85, storage: "Açıldıktan sonra suyu ve eti soğukta tutulmalıdır.", desc: "Doğal suyu ve dokulu etiyle ferah ve doyurucu." },
-  { id: "star-fruit", name: "Star Fruit", icon: "Star Fruit", category: "Egzotik", taste: "Ekşi", use: "Sunum", season: "Kış", popular: 70, storage: "Sarılaştığında tüketin, buzdolabında kısa süre saklayın.", desc: "Yıldız formu sayesinde tabaklarda güçlü görsel etki yaratır." },
-  { id: "durian", name: "Durian", icon: "Durian", category: "Premium", taste: "Yoğun", use: "Deneyim", season: "Yaz", popular: 67, storage: "Kokusu yoğun olduğu için kapalı kapta ve soğukta saklayın.", desc: "Cesur aromasıyla gerçek tropikal keşif sevenlere özel." },
-  { id: "soursop", name: "Soursop", icon: "Soursop", category: "Aromatik", taste: "Ekşi", use: "Smoothie", season: "İlkbahar", popular: 76, storage: "Yumuşadığında tüketin, kesildikten sonra soğukta saklayın.", desc: "Kremamsı, ekşi ve smoothie tariflerinde öne çıkan zengin bir meyve." }
+  {
+    id: "kirmizi-ejder-meyvesi",
+    name: "Kırmızı Ejder Meyvesi",
+    icon: "Kırmızı Ejder",
+    category: "Ejder Meyveleri",
+    taste: "Tatlı",
+    use: "Sunum",
+    season: "Yıl boyu",
+    popular: 99,
+    storage: "Buzdolabında 4-5 gün taze kalır; kesildikten sonra kapalı kapta saklanmalıdır.",
+    desc: "Canlı rengi, yumuşak dokusu ve ferah aromasıyla premium tabaklarda öne çıkar."
+  },
+  {
+    id: "beyaz-ejder-meyvesi",
+    name: "Beyaz Ejder Meyvesi",
+    icon: "Beyaz Ejder",
+    category: "Ejder Meyveleri",
+    taste: "Hafif",
+    use: "Sunum",
+    season: "Yıl boyu",
+    popular: 96,
+    storage: "Serin ortamda kısa süre bekletilebilir; olgunlaştığında buzdolabına alınmalıdır.",
+    desc: "Dengeli, sade ve ferah lezzetiyle tropikal meyve deneyimine zarif bir giriş sunar."
+  },
+  {
+    id: "sari-ejder-meyvesi",
+    name: "Sarı Ejder Meyvesi",
+    icon: "Sarı Ejder",
+    category: "Ejder Meyveleri",
+    taste: "Tatlı",
+    use: "Atıştırmalık",
+    season: "Yıl boyu",
+    popular: 94,
+    storage: "Kabuk parlaklığını korurken buzdolabında muhafaza edilmelidir.",
+    desc: "Daha yoğun tatlılığı ve özel kabuk yapısıyla seçkin tropikal ürünler arasındadır."
+  },
+  {
+    id: "yaban-mersini",
+    name: "Yaban Mersini",
+    icon: "Yaban Mersini",
+    category: "Taze Meyveler",
+    taste: "Tatlı",
+    use: "Kahvaltı",
+    season: "Yaz",
+    popular: 92,
+    storage: "Yıkanmadan buzdolabında saklanmalı, tüketmeden hemen önce yıkanmalıdır.",
+    desc: "Kahvaltı kaseleri, tatlılar ve ferah tabaklar için güçlü, doğal bir tamamlayıcıdır."
+  },
+  {
+    id: "altin-cilek",
+    name: "Altın Çilek",
+    icon: "Altın Çilek",
+    category: "Egzotik Seçki",
+    taste: "Ekşi",
+    use: "Atıştırmalık",
+    season: "Sonbahar",
+    popular: 88,
+    storage: "Kendi zarında serin ve kuru yerde kısa süre, buzdolabında daha uzun süre korunabilir.",
+    desc: "Tatlı-ekşi dengesi ve zarif görüntüsüyle doğal ürün vitrinlerinde dikkat çeker."
+  },
+  {
+    id: "pamelo",
+    name: "Pamelo",
+    icon: "Pamelo",
+    category: "Tropikal Klasikler",
+    taste: "Hafif",
+    use: "Salata",
+    season: "Kış",
+    popular: 86,
+    storage: "Bütün halde serin yerde saklanabilir; soyulduktan sonra kapalı kapta tutulmalıdır.",
+    desc: "Narenciye ailesinin iri, aromatik ve ferahlatıcı premium üyelerindendir."
+  },
+  {
+    id: "avokado",
+    name: "Avokado",
+    icon: "Avokado",
+    category: "Tropikal Klasikler",
+    taste: "Kremamsı",
+    use: "Salata",
+    season: "Yıl boyu",
+    popular: 95,
+    storage: "Olgunlaşınca buzdolabına alın; kesildikten sonra limonla kararmayı yavaşlatın.",
+    desc: "Kremamsı dokusu, dengeli yağ profili ve çok yönlü kullanımıyla sofraların güçlü ürünü."
+  },
+  {
+    id: "mango",
+    name: "Mango",
+    icon: "Mango",
+    category: "Tropikal Klasikler",
+    taste: "Tatlı",
+    use: "Tatlılar",
+    season: "Yaz",
+    popular: 97,
+    storage: "Oda sıcaklığında olgunlaştırın; kesildikten sonra buzdolabında saklayın.",
+    desc: "Yoğun aroması, sulu dokusu ve güneşli lezzetiyle tropikal seçkinin vazgeçilmezidir."
+  },
+  {
+    id: "kumkat",
+    name: "Kumkat",
+    icon: "Kumkat",
+    category: "Egzotik Seçki",
+    taste: "Ekşi",
+    use: "Sunum",
+    season: "Kış",
+    popular: 82,
+    storage: "Buzdolabında nemini koruyacak şekilde saklanmalı, kısa sürede tüketilmelidir.",
+    desc: "Kabuğuyla tüketilebilen aromatik yapısı sayesinde sunumlarda canlı bir etki oluşturur."
+  },
+  {
+    id: "carkifelek",
+    name: "Çarkıfelek",
+    icon: "Çarkıfelek",
+    category: "Egzotik Seçki",
+    taste: "Ekşi",
+    use: "İçecek",
+    season: "İlkbahar",
+    popular: 93,
+    storage: "Kabuk hafif kırıştığında aroması yoğunlaşır; buzdolabında saklanabilir.",
+    desc: "Keskin kokusu ve tatlı-ekşi dengesiyle içecek, tatlı ve soslarda güçlü aroma verir."
+  },
+  {
+    id: "yildiz-meyvesi",
+    name: "Yıldız Meyvesi",
+    icon: "Yıldız Meyvesi",
+    category: "Egzotik Seçki",
+    taste: "Hafif",
+    use: "Sunum",
+    season: "Kış",
+    popular: 80,
+    storage: "Sarılaştığında tüketilmeli; buzdolabında kısa süre muhafaza edilmelidir.",
+    desc: "Yıldız formu, ince aroması ve dekoratif duruşuyla premium sunumların imzasıdır."
+  }
 ];
 
 const boxes = [
-  ["Başlangıç", "Tropikal dünyaya nazik giriş.", "Mango, ananas, guava", "Keşif"],
-  ["Premium", "Nadir ve etkileyici seçkiler.", "Mangosteen, rambutan, dragon fruit", "Özel"],
-  ["Smoothie", "Blender dostu aromatik set.", "Papaya, soursop, passion fruit", "Enerjik"],
-  ["Aile", "Paylaşım için dengeli kutu.", "Ananas, mango, avokado", "Bol"],
-  ["Sürpriz", "Haftanın taze keşfi.", "Mevsime göre değişir", "Merak"]
+  ["Başlangıç", "Tropikal dünyaya sade ve güvenli giriş.", "Mango, avokado, beyaz ejder meyvesi", "Keşif"],
+  ["Premium", "Renkli, nadir ve vitrin değeri yüksek seçki.", "Kırmızı ejder, sarı ejder, çarkıfelek", "Özel"],
+  ["Sunum", "Tabak, otel ve davet sunumları için güçlü görünüm.", "Yıldız meyvesi, kumkat, altın çilek", "Vitrin"],
+  ["Aile", "Paylaşım ve günlük tüketim için dengeli içerik.", "Mango, yaban mersini, pamelo", "Dengeli"],
+  ["Sürpriz", "Mevsime göre seçilen taze tropikal keşif.", "Haftanın uygun ürünleri", "Merak"]
 ];
 
 const posts = [
-  ["Tropikal Meyveler Nasıl Olgunlaştırılır?", "Mango, avokado ve papaya için doğru bekletme ritmi.", "Rehber"],
-  ["Dragon Fruit ile Premium Sunum Fikirleri", "Renk, doku ve tabak düzeninde sade ama etkili öneriler.", "Sunum"],
-  ["Smoothie İçin En Uyumlu Tropikal Meyveler", "Tatlılık, asidite ve kıvam dengesini kuran kombinasyonlar.", "Tarif"],
-  ["Passion Fruit Neden Bu Kadar Aromatik?", "Koku yoğunluğu ve kullanım alanlarını sade bir dille anlatıyoruz.", "Bilgi"]
+  ["Ejder Meyvesi Çeşitleri Arasındaki Farklar", "Kırmızı, beyaz ve sarı ejder meyvesini tat, doku ve kullanım açısından karşılaştırıyoruz.", "Rehber"],
+  ["Avokado Nasıl Olgunlaştırılır?", "Doğru bekletme, kesim ve saklama adımlarını sade şekilde anlatıyoruz.", "Saklama"],
+  ["Çarkıfelek Nerelerde Kullanılır?", "İçecek, tatlı ve soslarda güçlü aromayı nasıl dengeleyeceğinizi öğrenin.", "Bilgi"],
+  ["Tropikal Sunum İçin Renk Dengesi", "Yıldız meyvesi, kumkat ve altın çilekle premium tabak fikri.", "Sunum"]
 ];
 
 const recipes = [
-  ["Mango & Passion Smoothie", "Mango, passion fruit, ananas suyu ve buz."],
-  ["Papaya Kahvaltı Kasesi", "Papaya, yoğurt, granola ve guava dilimleri."],
-  ["Avokado Tropikal Salata", "Avokado, star fruit, limon, yeşillik ve zeytinyağı."],
-  ["Soursop Ferahlığı", "Soursop püresi, Hindistan cevizi suyu ve nane."]
+  ["Mango & Çarkıfelek Smoothie", "Mango, çarkıfelek özü, buz ve ferah narenciye dokunuşu."],
+  ["Ejder Meyveli Kahvaltı Kasesi", "Beyaz ejder, yaban mersini, yoğurt ve granola."],
+  ["Avokado Tropikal Salata", "Avokado, pamelo, yıldız meyvesi ve zeytinyağı."],
+  ["Altın Çilek Sunum Tabağı", "Altın çilek, kumkat, mango ve taze nane."]
 ];
 
 const brandDescription = "Biçer Tropikal, toprağın cömertliğini, güneşin sıcaklığını ve eşsiz lezzetleri sofralarınıza taşıma misyonuyla yola çıkmış bir firmadır. Kuruluşumuzdan bu yana, dünyanın dört bir yanındaki en kaliteli ve en taze tropikal meyveleri titizlikle seçerek, modern ve hijyenik koşullarda işleyip sizlere ulaştırmanın gururunu yaşıyoruz.";
@@ -44,7 +163,7 @@ const app = document.querySelector("#main");
 const navLinks = document.querySelectorAll(".nav-links a");
 let state = {
   lang: localStorage.getItem("bt-lang") || "tr",
-  products: JSON.parse(localStorage.getItem("bt-products") || "null") || fruits,
+  products: fruits,
   messages: JSON.parse(localStorage.getItem("bt-messages") || "[]")
 };
 
@@ -56,6 +175,11 @@ function slugPath() {
   return location.hash.replace("#", "") || "/";
 }
 
+function queryValue(name) {
+  const hash = location.hash.split("?")[1] || "";
+  return new URLSearchParams(hash).get(name) || "";
+}
+
 function breadcrumb(items) {
   return `<div class="breadcrumb"><a href="#/">Biçer Tropikal</a> / ${items.join(" / ")}</div>`;
 }
@@ -65,95 +189,123 @@ function pageHero(title, text, crumb = title) {
   return `<section class="page-hero">${breadcrumb([crumb])}<p class="eyebrow">Biçer Tropikal</p><h1>${title}</h1><p>${text}</p></section>`;
 }
 
+function stars() {
+  return `<div class="stars" aria-label="5 yıldız">★★★★★</div>`;
+}
+
 function fruitCard(fruit) {
   return `
-    <article class="fruit-card">
+    <article class="fruit-card product-card">
+      <a class="quick-view" href="#/product/${fruit.id}">Hızlı İncele</a>
       <div class="fruit-art" aria-hidden="true"><span>${fruit.icon}</span></div>
+      <span class="tag">${fruit.category}</span>
       <h3>${fruit.name}</h3>
+      ${stars()}
       <p>${fruit.desc}</p>
       <div class="tags">
         <span class="tag">${fruit.taste}</span>
         <span class="tag">${fruit.use}</span>
       </div>
-      <p><strong>Saklama:</strong> ${fruit.storage}</p>
-      <a class="small-link" href="#/product/${fruit.id}">Detay</a>
+      <a class="btn ghost card-btn" href="#/product/${fruit.id}">Detaylı İncele</a>
     </article>
   `;
 }
 
-function home() {
-  document.title = "Biçer Tropikal | Premium Tropikal Meyve Platformu";
+function categoryCard(category, text) {
+  const count = state.products.filter((fruit) => fruit.category === category).length;
   return `
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Tayfun Biçer'in tropikal seçkisi</p>
+    <a class="category-card" href="#/catalog?category=${encodeURIComponent(category)}">
+      <span>${count} ürün</span>
+      <h3>${category}</h3>
+      <p>${text}</p>
+    </a>
+  `;
+}
+
+function home() {
+  document.title = "Biçer Tropikal | Tropik Lezzetin Prestij Adresi";
+  const categories = [
+    ["Ejder Meyveleri", "Kırmızı, beyaz ve sarı ejder meyvesi seçkileri."],
+    ["Tropikal Klasikler", "Mango, avokado ve pamelo gibi güçlü lezzetler."],
+    ["Egzotik Seçki", "Kumkat, çarkıfelek, altın çilek ve yıldız meyvesi."],
+    ["Taze Meyveler", "Yaban mersini gibi taze ve kullanımı kolay ürünler."]
+  ];
+  return `
+    <section class="store-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Tropik lezzetin prestij adresi</p>
         <h1>Biçer Tropikal</h1>
         <p>${brandDescription}</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#/catalog">Kataloğu Keşfet</a>
-          <a class="btn ghost" href="#/guide">Saklama Rehberi</a>
-        </div>
-        <div class="stats" aria-label="Marka öne çıkanları">
-          <div class="stat"><strong>13</strong><span>Meyve</span></div>
-          <div class="stat"><strong>5</strong><span>Kutu</span></div>
-          <div class="stat"><strong>TR/EN</strong><span>Hazır</span></div>
+          <a class="btn primary" href="#/catalog">Ürünleri İncele</a>
+          <a class="btn ghost" href="#/corporate">Kurumsal Talep</a>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Tropikal meyve görsel alanı">
-        <div class="fruit-bowl"></div>
-        <div class="hero-card">
-          <h2>Haftanın Seçkisi</h2>
-          <p>Mango, passion fruit ve dragon fruit ile dengeli, aromatik ve renkli bir keşif.</p>
-          <a class="small-link" href="#/product/mango">Mangoyu incele</a>
-        </div>
+      <div class="hero-showcase">
+        <img src="assets/bicer-tropikal-logo.jpeg" alt="Biçer Tropikal logosu" loading="eager" />
       </div>
     </section>
-    <section class="section">
+
+    <section class="section compact-section">
       <div class="section-head">
-        <div><p class="eyebrow">Öne çıkan ürünler</p><h2>En çok merak edilen tropikal lezzetler</h2></div>
-        <a class="btn ghost" href="#/catalog">Tümünü gör</a>
+        <div><p class="eyebrow">En popüler kategoriler</p><h2>Kategorilere göre keşfet</h2></div>
+        <a class="small-link" href="#/catalog">Tüm ürünler</a>
       </div>
-      <div class="grid four">${state.products.slice(0, 4).map(fruitCard).join("")}</div>
+      <div class="category-grid">${categories.map((item) => categoryCard(item[0], item[1])).join("")}</div>
     </section>
-    <section class="band"><div class="section founder">
-      <div class="founder-portrait" aria-hidden="true">TB</div>
+
+    <section class="section compact-section">
+      <div class="section-head">
+        <div><p class="eyebrow">Öne çıkan ürünler</p><h2>Vitrinin favorileri</h2></div>
+      </div>
+      <div class="grid four">${state.products.slice(0, 6).map(fruitCard).join("")}</div>
+    </section>
+
+    <section class="market-band">
       <div>
-        <p class="eyebrow">Kurucu mesajı</p>
-        <h2>“Her meyvenin bir hikayesi, doğru zamanı ve sofraya kattığı ayrı bir değer var.”</h2>
+        <p class="eyebrow">Toptan ve kurumsal bilgi</p>
+        <h2>Otel, restoran, kafe ve özel sunumlar için bilgi talebi alınır.</h2>
+        <p>Bu platform satış sitesi değildir; ürün kataloğu, bilgilendirme ve kurumsal talep akışı için hazırlanmıştır.</p>
+      </div>
+      <a class="btn secondary" href="#/corporate">Talep Formu</a>
+    </section>
+
+    <section class="section compact-section">
+      <div class="section-head"><div><p class="eyebrow">Tüm ürünlerimiz</p><h2>Biçer Tropikal kataloğu</h2></div></div>
+      <div class="grid four">${state.products.map(fruitCard).join("")}</div>
+    </section>
+
+    <section class="section compact-section">
+      <div class="section-head"><div><p class="eyebrow">Meyve kutuları</p><h2>Seçki fikirleri</h2></div></div>
+      <div class="grid three">${boxes.map(boxCard).join("")}</div>
+    </section>
+
+    <section class="section compact-section founder">
+      <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo.jpeg" alt="Biçer Tropikal" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">Hakkımızda</p>
+        <h2>Toprağın cömertliği, güneşin sıcaklığı ve seçilmiş tropikal lezzetler.</h2>
         <p>${brandDescription}</p>
+        <a class="small-link" href="#/about">Marka hikayesini oku</a>
       </div>
-    </div></section>
-    <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Meyve kutuları</p><h2>Satış değil, seçki fikri</h2></div></div>
-      <div class="grid five grid three">${boxes.map(boxCard).join("")}</div>
-    </section>
-    <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Yorumlar</p><h2>Marka hissi</h2></div></div>
-      <div class="grid three">
-        ${["Bilgilendirici, sade ve güven veren bir platform.", "Tropikal meyveleri ilk kez bu kadar anlaşılır keşfettim.", "Premium hissi abartısız ve doğal."].map((q) => `<article class="quote-card"><div class="stars">★★★★★</div><p>${q}</p></article>`).join("")}
-      </div>
-    </section>
-    <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Sosyal medya</p><h2>Galeri alanı</h2></div><div class="socials"><a href="https://instagram.com/" target="_blank" rel="noreferrer">IG</a><a href="https://tiktok.com/" target="_blank" rel="noreferrer">TK</a><a href="https://facebook.com/" target="_blank" rel="noreferrer">FB</a></div></div>
-      <div class="social-gallery"><span>Mango</span><span>Ananas</span><span>Hindistan Cevizi</span><span>Star Fruit</span><span>Passion Fruit</span></div>
     </section>
   `;
 }
 
 function boxCard(box) {
-  return `<article class="box-card"><span class="tag">${box[3]}</span><h3>${box[0]}</h3><p>${box[1]}</p><p><strong>İçerik:</strong> ${box[2]}</p><a class="small-link" href="#/boxes">${t("Detay", "Details")}</a></article>`;
+  return `<article class="box-card"><span class="tag">${box[3]}</span><h3>${box[0]}</h3><p>${box[1]}</p><p><strong>İçerik:</strong> ${box[2]}</p><a class="small-link" href="#/boxes">Bilgi Al</a></article>`;
 }
 
 function catalog() {
   return `
-    ${pageHero("Katalog", "Tat profili, kullanım amacı, mevsim ve popülerliğe göre filtrelenebilen tropikal meyve kataloğu.")}
+    ${pageHero("Ürünlerimiz", "Kategori, tat profili, kullanım amacı ve mevsime göre filtrelenebilen Biçer Tropikal ürün vitrini.")}
     <section class="section">
       <div class="toolbar">
-        <div class="field"><label for="catalogSearch">Canlı katalog araması</label><input id="catalogSearch" type="search" placeholder="Meyve adı veya kullanım..." /></div>
-        <div class="field"><label for="tasteFilter">Tat profili</label><select id="tasteFilter"><option value="">Tümü</option><option>Tatlı</option><option>Ekşi</option><option>Hafif</option><option>Kremamsı</option><option>Yoğun</option></select></div>
-        <div class="field"><label for="useFilter">Kullanım amacı</label><select id="useFilter"><option value="">Tümü</option><option>Tatlılar</option><option>Sunum</option><option>Kahvaltı</option><option>İçecek</option><option>Smoothie</option><option>Salata</option><option>Atıştırmalık</option><option>Deneyim</option></select></div>
-        <div class="field"><label for="seasonFilter">Mevsim</label><select id="seasonFilter"><option value="">Tümü</option><option>Yıl boyu</option><option>Yaz</option><option>Kış</option><option>İlkbahar</option><option>Sonbahar</option></select></div>
-        <div class="field"><label for="sortFilter">Popülerlik</label><select id="sortFilter"><option value="popular">Popüler</option><option value="az">A-Z</option></select></div>
+        <div class="field"><label for="catalogSearch">Canlı ürün araması</label><input id="catalogSearch" type="search" placeholder="Ejder meyvesi, mango, avokado..." /></div>
+        <div class="field"><label for="categoryFilter">Kategori</label><select id="categoryFilter"><option value="">Tümü</option><option>Ejder Meyveleri</option><option>Tropikal Klasikler</option><option>Egzotik Seçki</option><option>Taze Meyveler</option></select></div>
+        <div class="field"><label for="tasteFilter">Tat profili</label><select id="tasteFilter"><option value="">Tümü</option><option>Tatlı</option><option>Ekşi</option><option>Hafif</option><option>Kremamsı</option></select></div>
+        <div class="field"><label for="useFilter">Kullanım amacı</label><select id="useFilter"><option value="">Tümü</option><option>Sunum</option><option>Kahvaltı</option><option>Atıştırmalık</option><option>Salata</option><option>Tatlılar</option><option>İçecek</option></select></div>
+        <div class="field"><label for="sortFilter">Sıralama</label><select id="sortFilter"><option value="popular">Popüler</option><option value="az">A-Z</option></select></div>
       </div>
       <div class="grid four" id="catalogGrid"></div>
     </section>
@@ -164,15 +316,15 @@ function renderCatalog() {
   const grid = document.querySelector("#catalogGrid");
   if (!grid) return;
   const q = document.querySelector("#catalogSearch").value.toLowerCase();
+  const category = document.querySelector("#categoryFilter").value;
   const taste = document.querySelector("#tasteFilter").value;
   const use = document.querySelector("#useFilter").value;
-  const season = document.querySelector("#seasonFilter").value;
   const sort = document.querySelector("#sortFilter").value;
   let list = state.products.filter((fruit) =>
     [fruit.name, fruit.desc, fruit.use, fruit.category].join(" ").toLowerCase().includes(q) &&
+    (!category || fruit.category === category) &&
     (!taste || fruit.taste === taste) &&
-    (!use || fruit.use === use) &&
-    (!season || fruit.season === season)
+    (!use || fruit.use === use)
   );
   list = list.sort((a, b) => sort === "az" ? a.name.localeCompare(b.name, "tr") : b.popular - a.popular);
   grid.innerHTML = list.length ? list.map(fruitCard).join("") : emptySearch();
@@ -180,28 +332,30 @@ function renderCatalog() {
 
 function productDetail(id) {
   const fruit = state.products.find((item) => item.id === id) || state.products[0];
-  const similar = state.products.filter((item) => item.id !== fruit.id && (item.taste === fruit.taste || item.use === fruit.use)).slice(0, 3);
+  const similar = state.products.filter((item) => item.id !== fruit.id && (item.category === fruit.category || item.taste === fruit.taste)).slice(0, 3);
   return `
-    ${pageHero(fruit.name, fruit.desc, `Katalog / ${fruit.name}`)}
+    ${pageHero(fruit.name, fruit.desc, `Ürünlerimiz / ${fruit.name}`)}
     <section class="section detail-layout">
       <div class="detail-panel">
         <div class="fruit-art"><span>${fruit.icon}</span></div>
+        <span class="tag">${fruit.category}</span>
         <h2>${fruit.name}</h2>
+        ${stars()}
         <p>${fruit.desc}</p>
-        <div class="tags"><span class="tag">${fruit.category}</span><span class="tag">${fruit.taste}</span><span class="tag">${fruit.use}</span></div>
+        <div class="tags"><span class="tag">${fruit.taste}</span><span class="tag">${fruit.use}</span><span class="tag">${fruit.season}</span></div>
       </div>
       <div class="detail-panel">
-        <h2>Ürün Detayı</h2>
-        ${infoBlock("Nasıl yenir?", "Yıkanır, uygun olgunlukta kesilir ve çekirdek/kabuk yapısına göre sade, salata ya da içecek içinde tüketilir.")}
+        <h2>Ürün Bilgisi</h2>
+        ${infoBlock("Nasıl yenir?", "Yıkanır, uygun olgunlukta hazırlanır ve ürün yapısına göre sade, sunum tabağı, salata, içecek veya tatlı içinde tüketilir.")}
         ${infoBlock("Nasıl saklanır?", fruit.storage)}
-        ${infoBlock("Olgunlaşma süreci", "Koku yoğunluğu, kabuk rengi ve hafif yumuşama olgunluğun ana işaretleridir.")}
-        ${infoBlock("Tarif önerileri", `${fruit.name} smoothie, kahvaltı kasesi ve ferah tatlılarda kullanılabilir.`)}
-        <h3>Besin bilgisi</h3>
-        <div class="nutrition"><div><strong>Enerji</strong><br>Orta</div><div><strong>Lif</strong><br>Yüksek</div><div><strong>Aroma</strong><br>${fruit.taste}</div></div>
+        ${infoBlock("Olgunlaşma süreci", "Koku, kabuk rengi, parlaklık ve hafif yumuşama olgunluk için takip edilebilir.")}
+        ${infoBlock("Tarif önerileri", `${fruit.name} kahvaltı kaseleri, ferah içecekler ve premium sunum tabaklarında değerlendirilebilir.`)}
+        <h3>Besin profili</h3>
+        <div class="nutrition"><div><strong>Enerji</strong><br>Orta</div><div><strong>Lif</strong><br>Dengeli</div><div><strong>Aroma</strong><br>${fruit.taste}</div></div>
       </div>
     </section>
     <section class="section">
-      <div class="section-head"><div><p class="eyebrow">Benzer ürünler</p><h2>Yakın aromalar</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Benzer ürünler</p><h2>Aynı seçkiden öneriler</h2></div></div>
       <div class="grid three">${similar.map(fruitCard).join("")}</div>
     </section>
     ${faqSection()}
@@ -216,14 +370,14 @@ function about() {
   return `
     ${pageHero("Hakkımızda", brandDescription)}
     <section class="section founder">
-      <div class="founder-portrait">TB</div>
+      <div class="founder-portrait image-portrait"><img src="assets/bicer-tropikal-logo.jpeg" alt="Biçer Tropikal" loading="lazy" /></div>
       <div><p class="eyebrow">Marka hikayesi</p><h2>Doğallık, güven ve kalite.</h2><p>${brandDescription}</p><p>Biçer Tropikal samimi ama premium, bilgilendirici ama sade bir marka tonu benimser.</p></div>
     </section>
   `;
 }
 
 function boxesPage() {
-  return `${pageHero("Meyve Kutuları", "Başlangıçtan premium keşiflere uzanan, satış amacı taşımayan örnek tropikal seçkiler.")}<section class="section"><div class="grid three">${boxes.map(boxCard).join("")}</div></section>`;
+  return `${pageHero("Meyve Kutuları", "Satış akışı olmayan, kurumsal ve kişisel keşiflere fikir veren tropikal seçki önerileri.")}<section class="section"><div class="grid three">${boxes.map(boxCard).join("")}</div></section>`;
 }
 
 function guidePage() {
@@ -241,9 +395,9 @@ function blogPage() {
 function faqSection() {
   const faqs = [
     ["Bu site satış yapıyor mu?", "Hayır. Biçer Tropikal bir tanıtım, katalog ve bilgi platformudur."],
-    ["Ödeme veya üyelik var mı?", "Hayır. Ödeme, üyelik, kargo, adres veya kart bilgisi alınmaz."],
-    ["Meyveler nasıl seçilmeli?", "Koku, kabuk durumu, hafif yumuşama ve kullanım amacına göre seçim yapılmalıdır."],
-    ["Görseller değiştirilebilir mi?", "Evet. Tüm görsel alanları sonradan gerçek ürün fotoğraflarıyla güncellenebilir."]
+    ["Ödeme, sepet veya üyelik var mı?", "Hayır. Ödeme, üyelik, sepet, kargo, adres veya kart bilgisi alınmaz."],
+    ["Kurumsal talep nasıl iletilir?", "Kurumsal talep formundan ad, e-posta, telefon ve mesaj bilgisiyle iletişim başlatılabilir."],
+    ["Görseller değiştirilebilir mi?", "Evet. Tüm ürün görsel alanları sonradan gerçek ürün fotoğraflarıyla güncellenebilir."]
   ];
   return `<section class="section"><div class="section-head"><div><p class="eyebrow">SSS</p><h2>Sık sorulan sorular</h2></div></div>${faqs.map((f) => `<div class="faq-item"><button type="button">${f[0]} <span>+</span></button><p>${f[1]}</p></div>`).join("")}</section>`;
 }
@@ -256,7 +410,7 @@ function contactPage(corporate = false) {
   return `
     ${pageHero(corporate ? "Kurumsal Talep" : "İletişim", corporate ? "Otel, restoran, kafe ve kurumsal iş birlikleri için talep formu." : "Sorularınız ve iş birliği talepleriniz için bize yazın.")}
     <section class="section contact-grid">
-      <div>${infoBlock("Güvenli iletişim", "Bu form adres, ödeme, kart veya üyelik bilgisi istemez.")}${infoBlock("Sosyal medya", "Instagram, TikTok ve Facebook profil linkleri footer alanından güncellenebilir.")}</div>
+      <div>${infoBlock("Güvenli iletişim", "Bu form adres, ödeme, kart veya üyelik bilgisi istemez.")}${infoBlock("Bilgi platformu", "Biçer Tropikal satış sitesi değildir; katalog, tanıtım ve kurumsal talep akışı sunar.")}</div>
       <form class="form-card" id="contactForm">
         <div class="field"><label for="name">Ad Soyad</label><input id="name" name="name" required /></div>
         <div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" required /></div>
@@ -275,7 +429,7 @@ function legalPage(type) {
 }
 
 function emptySearch() {
-  return `<article class="info-card"><h2>Sonuç bulunamadı</h2><p>Aradığınız kriterlere uygun içerik yok. Filtreleri temizleyerek tekrar deneyin.</p><a class="btn primary" href="#/catalog">Kataloğa dön</a></article>`;
+  return `<article class="info-card"><h2>Sonuç bulunamadı</h2><p>Aradığınız kriterlere uygun içerik yok. Filtreleri temizleyerek tekrar deneyin.</p><a class="btn primary" href="#/catalog">Ürünlere dön</a></article>`;
 }
 
 function notFound() {
@@ -316,7 +470,7 @@ function renderAdmin(tab = 0) {
 function route() {
   document.querySelector("#loading").classList.add("show");
   setTimeout(() => document.querySelector("#loading").classList.remove("show"), 240);
-  const path = slugPath();
+  const path = slugPath().split("?")[0];
   const parts = path.split("/").filter(Boolean);
   const first = parts[0] || "";
   const routes = {
@@ -342,9 +496,15 @@ function route() {
 }
 
 function bindPageEvents() {
-  if (document.querySelector("#catalogGrid")) {
+  const grid = document.querySelector("#catalogGrid");
+  if (grid) {
     renderCatalog();
-    ["catalogSearch", "tasteFilter", "useFilter", "seasonFilter", "sortFilter"].forEach((id) => document.querySelector(`#${id}`).addEventListener("input", renderCatalog));
+    const categoryFromUrl = queryValue("category");
+    if (categoryFromUrl && document.querySelector("#categoryFilter")) {
+      document.querySelector("#categoryFilter").value = categoryFromUrl;
+      renderCatalog();
+    }
+    ["catalogSearch", "categoryFilter", "tasteFilter", "useFilter", "sortFilter"].forEach((id) => document.querySelector(`#${id}`).addEventListener("input", renderCatalog));
   }
   document.querySelectorAll(".faq-item button").forEach((button) => button.addEventListener("click", () => button.parentElement.classList.toggle("open")));
   const form = document.querySelector("#contactForm");
