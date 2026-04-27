@@ -8,7 +8,7 @@ const fruits = [
     use: "Sunum",
     season: "Yıl boyu",
     popular: 99,
-    storage: "Buzdolabında 4-5 gün taze kalır; kesildikten sonra kapalı kapta saklanmalıdır.",
+    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Canlı rengi, yumuşak dokusu ve ferah aromasıyla premium tabaklarda öne çıkar."
   },
   {
@@ -20,7 +20,7 @@ const fruits = [
     use: "Sunum",
     season: "Yıl boyu",
     popular: 96,
-    storage: "Serin ortamda kısa süre bekletilebilir; olgunlaştığında buzdolabına alınmalıdır.",
+    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Dengeli, sade ve ferah lezzetiyle tropikal meyve deneyimine zarif bir giriş sunar."
   },
   {
@@ -32,7 +32,7 @@ const fruits = [
     use: "Atıştırmalık",
     season: "Yıl boyu",
     popular: 94,
-    storage: "Kabuk parlaklığını korurken buzdolabında muhafaza edilmelidir.",
+    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Daha yoğun tatlılığı ve özel kabuk yapısıyla seçkin tropikal ürünler arasındadır."
   },
   {
@@ -44,7 +44,7 @@ const fruits = [
     use: "Sunum",
     season: "Yıl boyu",
     popular: 98,
-    storage: "Buzdolabında 4-5 gün taze kalır; kesildikten sonra kapalı kapta saklanmalıdır.",
+    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Paketlerde dengeli görünüm ve ferah lezzet veren tropikal ürün ailesidir."
   },
   {
@@ -56,7 +56,7 @@ const fruits = [
     use: "Kahvaltı",
     season: "Yaz",
     popular: 92,
-    storage: "Yıkanmadan buzdolabında saklanmalı, tüketmeden hemen önce yıkanmalıdır.",
+    storage: "Yıkamadan saklayın. Buzdolabında 5-10 gün taze kalabilir; tüketmeden hemen önce yıkayın.",
     desc: "Kahvaltı kaseleri, tatlılar ve ferah tabaklar için güçlü, doğal bir tamamlayıcıdır."
   },
   {
@@ -116,7 +116,7 @@ const fruits = [
     use: "Salata",
     season: "Yıl boyu",
     popular: 95,
-    storage: "Olgunlaşınca buzdolabına alın; kesildikten sonra limonla kararmayı yavaşlatın.",
+    storage: "Sertse oda sıcaklığında olgunlaştırın. Olgunlaştıktan sonra buzdolabında 2-3 gün saklayın. Kesildikten sonra limon sürüp kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Kremamsı dokusu, dengeli yağ profili ve çok yönlü kullanımıyla sofraların güçlü ürünü."
   },
   {
@@ -128,7 +128,7 @@ const fruits = [
     use: "Tatlılar",
     season: "Yaz",
     popular: 97,
-    storage: "Oda sıcaklığında olgunlaştırın; kesildikten sonra buzdolabında saklayın.",
+    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-5 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Yoğun aroması, sulu dokusu ve güneşli lezzetiyle tropikal seçkinin vazgeçilmezidir."
   },
   {
@@ -152,7 +152,7 @@ const fruits = [
     use: "İçecek",
     season: "İlkbahar",
     popular: 93,
-    storage: "Kabuk hafif kırıştığında aroması yoğunlaşır; buzdolabında saklanabilir.",
+    storage: "Oda sıcaklığında 3-5 gün olgunlaşabilir. Buzdolabında 1-2 hafta saklayın. Kesildikten sonra kapalı kapta 2-3 gün içinde tüketin.",
     desc: "Keskin kokusu ve tatlı-ekşi dengesiyle içecek, tatlı ve soslarda güçlü aroma verir."
   },
   {
@@ -164,7 +164,7 @@ const fruits = [
     use: "Sunum",
     season: "Kış",
     popular: 80,
-    storage: "Sarılaştığında tüketilmeli; buzdolabında kısa süre muhafaza edilmelidir.",
+    storage: "Oda sıcaklığında kısa süre bekleyebilir. Buzdolabında 5-7 gün saklayın; tüketmeden önce yıkayın.",
     desc: "Yıldız formu, ince aroması ve dekoratif duruşuyla premium sunumların imzasıdır."
   },
   {
