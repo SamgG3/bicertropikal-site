@@ -522,7 +522,7 @@ function contactPage(corporate = false) {
         <div class="field"><label for="message">Mesaj</label><textarea id="message" name="message" required></textarea></div>
         <label class="consent-check">
           <input type="checkbox" name="consent" required />
-          <span><a href="#/legal/kvkk">KVKK Aydınlatma Metni</a> ve <a href="#/legal/privacy">Gizlilik Politikası</a> kapsamında, bilgilerimin WhatsApp üzerinden iletişim talebime dönüş yapılması amacıyla kullanılacağını kabul ediyorum.</span>
+          <span><a href="#/legal/kvkk">KVKK Aydınlatma Metni</a> ve <a href="#/legal/privacy">Gizlilik Politikası</a> hakkında bilgilendirildim.</span>
         </label>
         <button class="btn primary" type="submit">WhatsApp'a Yönlendir</button>
         <p id="formStatus" role="status"></p>
