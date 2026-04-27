@@ -224,7 +224,7 @@ const boxes = [
   ["Bizim Aile", "Günlük tüketim ve aile paylaşımı için dengeli içerik.", "Kumkat, mango, altın çilek, yaban mersini, ejder meyvesi", "Aile"],
   ["Mega", "Yoğun ürün çeşitliliğiyle premium vitrin paketi.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado", "Mega"],
   ["Vitamin C", "Narenciye ağırlıklı ferah ve canlı seçki.", "Portakal, mandalina, limon, kumkat, greyfurt", "Vitamin"],
-  ["Business", "Kurumsal sunumlar için dengeli ve prestijli paket.", "Yaban mersini, altın çilek, ejder meyvesi, mango, avokado, kumkat", "Kurumsal"]
+  ["Business", "Kurumsal sunumlar için dengeli ve prestijli paket.", "Yaban mersini, altın çilek, ejder meyvesi, mango, avokado, kumkat", "Kurumsal", "assets/business-box.jpeg"]
 ];
 
 const posts = [
@@ -382,7 +382,8 @@ function home() {
 }
 
 function boxCard(box) {
-  return `<article class="box-card"><span class="tag">${box[3]}</span><h3>${box[0]}</h3><p>${box[1]}</p><p><strong>İçerik:</strong> ${box[2]}</p><div class="product-meta"><strong>Fiyat:</strong> 0 TL <span>Stokta yok</span></div><a class="small-link" href="https://wa.me/905537230927?text=${encodeURIComponent(`Merhaba, ${box[0]} hakkında bilgi almak istiyorum. İçerik: ${box[2]}`)}" target="_blank" rel="noreferrer">WhatsApp ile Sor</a></article>`;
+  const image = box[4] ? `<div class="fruit-art box-photo"><img src="${box[4]}" alt="${box[0]} meyve kutusu" loading="lazy" /></div>` : "";
+  return `<article class="box-card">${image}<span class="tag">${box[3]}</span><h3>${box[0]}</h3><p>${box[1]}</p><p><strong>İçerik:</strong> ${box[2]}</p><div class="product-meta"><strong>Fiyat:</strong> 0 TL <span>Stokta yok</span></div><a class="small-link" href="https://wa.me/905537230927?text=${encodeURIComponent(`Merhaba, ${box[0]} hakkında bilgi almak istiyorum. İçerik: ${box[2]}`)}" target="_blank" rel="noreferrer">WhatsApp ile Sor</a></article>`;
 }
 
 function catalog() {
