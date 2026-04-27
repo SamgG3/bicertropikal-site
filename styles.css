@@ -61,6 +61,59 @@ body.search-active {
   overflow: hidden;
 }
 
+.intro-screen {
+  align-items: center;
+  animation: introExit 0.55s ease 3.6s forwards;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 193, 7, 0.2), transparent 34%),
+    var(--cream);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  inset: 0;
+  justify-content: center;
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+}
+
+.intro-emblem {
+  animation: introPop 0.72s ease both;
+  height: 118px;
+  overflow: hidden;
+  position: relative;
+  width: 118px;
+}
+
+.intro-emblem img {
+  height: 118px;
+  left: -8px;
+  max-width: none;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  width: 472px;
+}
+
+.intro-brand {
+  animation: introRise 0.72s ease 0.72s both;
+  color: var(--ink);
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(2.1rem, 6vw, 4.7rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.intro-tagline {
+  animation: introRise 0.72s ease 1.38s both;
+  color: var(--green);
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(1rem, 2.6vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -951,6 +1004,47 @@ p {
   width: 38px;
 }
 
+.social-list {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.social-list span {
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 700;
+}
+
+.whatsapp-link,
+.mail-link {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-weight: 800;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.consent-check {
+  align-items: flex-start;
+  color: var(--muted);
+  display: flex;
+  font-size: 0.92rem;
+  gap: 10px;
+  line-height: 1.45;
+  margin: 16px 0;
+}
+
+.consent-check input {
+  accent-color: var(--green);
+  flex: 0 0 auto;
+  height: 18px;
+  margin-top: 3px;
+  width: 18px;
+}
+
 .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.62);
@@ -1084,6 +1178,35 @@ p {
   }
 }
 
+@keyframes introPop {
+  from {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes introRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introExit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1091,6 +1214,10 @@ p {
     animation-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .intro-screen {
+    display: none;
   }
 }
 

@@ -495,12 +495,26 @@ function contactPage(corporate = false) {
   return `
     ${pageHero(corporate ? "Kurumsal Talep" : "İletişim", corporate ? "Otel, restoran, kafe ve kurumsal iş birlikleri için talep formu." : "Sorularınız ve iş birliği talepleriniz için bize yazın.")}
     <section class="section contact-grid">
-      <div>${infoBlock("Güvenli iletişim", "Bu form adres, ödeme, kart veya üyelik bilgisi istemez.")}${infoBlock("Bilgi platformu", "Biçer Tropikal satış sitesi değildir; katalog, tanıtım ve kurumsal talep akışı sunar.")}</div>
+      <div>
+        ${infoBlock("Güvenli iletişim", "Bu form adres, ödeme, kart veya üyelik bilgisi istemez. Bilgiler yalnızca talebinize dönüş yapmak için kullanılır.")}
+        ${infoBlock("E-posta", `<a class="small-link" href="mailto:bicertropikal@gmail.com">bicertropikal@gmail.com</a>`)}
+        <article class="info-card">
+          <h3>WhatsApp iletişim hatları</h3>
+          <div class="contact-actions">
+            <a class="btn primary" href="https://wa.me/905537230927" target="_blank" rel="noreferrer">WhatsApp İletişim 1</a>
+            <a class="btn ghost" href="https://wa.me/905464414136" target="_blank" rel="noreferrer">WhatsApp İletişim 2</a>
+          </div>
+        </article>
+      </div>
       <form class="form-card" id="contactForm">
         <div class="field"><label for="name">Ad Soyad</label><input id="name" name="name" required /></div>
         <div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" required /></div>
         <div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" inputmode="tel" /></div>
         <div class="field"><label for="message">Mesaj</label><textarea id="message" name="message" required></textarea></div>
+        <label class="consent-check">
+          <input type="checkbox" name="consent" required />
+          <span>Bilgilerimin yalnızca iletişim talebime dönüş yapılması amacıyla kullanılacağını ve üçüncü kişilerle paylaşılmayacağını kabul ediyorum.</span>
+        </label>
         <button class="btn primary" type="submit">Mesaj Gönder</button>
         <p id="formStatus" role="status"></p>
       </form>
