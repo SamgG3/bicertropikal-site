@@ -36,6 +36,18 @@ const fruits = [
     desc: "Daha yoğun tatlılığı ve özel kabuk yapısıyla seçkin tropikal ürünler arasındadır."
   },
   {
+    id: "ejder-meyvesi",
+    name: "Ejder Meyvesi",
+    icon: "Ejder Meyvesi",
+    category: "Ejder Meyveleri",
+    taste: "Hafif",
+    use: "Sunum",
+    season: "Yıl boyu",
+    popular: 98,
+    storage: "Buzdolabında 4-5 gün taze kalır; kesildikten sonra kapalı kapta saklanmalıdır.",
+    desc: "Paketlerde dengeli görünüm ve ferah lezzet veren tropikal ürün ailesidir."
+  },
+  {
     id: "yaban-mersini",
     name: "Yaban Mersini",
     icon: "Yaban Mersini",
@@ -70,6 +82,30 @@ const fruits = [
     popular: 86,
     storage: "Bütün halde serin yerde saklanabilir; soyulduktan sonra kapalı kapta tutulmalıdır.",
     desc: "Narenciye ailesinin iri, aromatik ve ferahlatıcı premium üyelerindendir."
+  },
+  {
+    id: "nar",
+    name: "Nar",
+    icon: "Nar",
+    category: "Klasik Meyveler",
+    taste: "Tatlı",
+    use: "Sunum",
+    season: "Kış",
+    popular: 89,
+    storage: "Bütün halde serin yerde, ayıklandıktan sonra kapalı kapta buzdolabında saklanmalıdır.",
+    desc: "Rengi ve taneli dokusuyla paketlere canlılık ve güçlü sunum etkisi katar."
+  },
+  {
+    id: "muz",
+    name: "Muz",
+    icon: "Muz",
+    category: "Klasik Meyveler",
+    taste: "Tatlı",
+    use: "Atıştırmalık",
+    season: "Yıl boyu",
+    popular: 87,
+    storage: "Oda sıcaklığında saklanmalı; fazla olgunlaşınca serin ortamda kısa süre korunmalıdır.",
+    desc: "Aile paketlerinde doyurucu, tanıdık ve kolay tüketilen tamamlayıcı meyvedir."
   },
   {
     id: "avokado",
@@ -130,15 +166,65 @@ const fruits = [
     popular: 80,
     storage: "Sarılaştığında tüketilmeli; buzdolabında kısa süre muhafaza edilmelidir.",
     desc: "Yıldız formu, ince aroması ve dekoratif duruşuyla premium sunumların imzasıdır."
+  },
+  {
+    id: "portakal",
+    name: "Portakal",
+    icon: "Portakal",
+    category: "Vitamin C",
+    taste: "Tatlı",
+    use: "İçecek",
+    season: "Kış",
+    popular: 86,
+    storage: "Serin ve kuru yerde saklanabilir; sıkıldıktan sonra bekletmeden tüketilmelidir.",
+    desc: "Vitamin C paketinin ferah, sulu ve klasik narenciye temelidir."
+  },
+  {
+    id: "mandalina",
+    name: "Mandalina",
+    icon: "Mandalina",
+    category: "Vitamin C",
+    taste: "Tatlı",
+    use: "Atıştırmalık",
+    season: "Kış",
+    popular: 84,
+    storage: "Serin yerde saklanmalı, kabuğu yumuşamadan tüketilmelidir.",
+    desc: "Kolay soyulan yapısı ve canlı aromasıyla narenciye seçkisini tamamlar."
+  },
+  {
+    id: "limon",
+    name: "Limon",
+    icon: "Limon",
+    category: "Vitamin C",
+    taste: "Ekşi",
+    use: "İçecek",
+    season: "Yıl boyu",
+    popular: 82,
+    storage: "Buzdolabında daha uzun süre taze kalır; kesildikten sonra kapalı kapta tutulmalıdır.",
+    desc: "İçecek, salata ve taze sunumlarda aromayı keskinleştiren temel üründür."
+  },
+  {
+    id: "greyfurt",
+    name: "Greyfurt",
+    icon: "Greyfurt",
+    category: "Vitamin C",
+    taste: "Ekşi",
+    use: "İçecek",
+    season: "Kış",
+    popular: 80,
+    storage: "Serin yerde saklanabilir; dilimlendikten sonra buzdolabına alınmalıdır.",
+    desc: "Hafif buruk aromasıyla Vitamin C seçkisine karakterli bir lezzet verir."
   }
 ];
 
 const boxes = [
-  ["Başlangıç", "Tropikal dünyaya sade ve güvenli giriş.", "Mango, avokado, beyaz ejder meyvesi", "Keşif"],
-  ["Premium", "Renkli, nadir ve vitrin değeri yüksek seçki.", "Kırmızı ejder, sarı ejder, çarkıfelek", "Özel"],
-  ["Sunum", "Tabak, otel ve davet sunumları için güçlü görünüm.", "Yıldız meyvesi, kumkat, altın çilek", "Vitrin"],
-  ["Aile", "Paylaşım ve günlük tüketim için dengeli içerik.", "Mango, yaban mersini, pamelo", "Dengeli"],
-  ["Sürpriz", "Mevsime göre seçilen taze tropikal keşif.", "Haftanın uygun ürünleri", "Merak"]
+  ["Ekonomik Paket", "Tropikal keşfe dengeli ve pratik başlangıç.", "Ejder meyvesi, avokado, altın çilek, yaban mersini", "Ekonomik"],
+  ["Sevdiğine Gönder", "Hediye hissi güçlü, renkli ve özenli seçki.", "Yaban mersini, altın çilek, kumkat, ejder meyvesi, mango, pamelo", "Hediye"],
+  ["Geniş Aile", "Kalabalık sofralar için zengin ve paylaşılabilir paket.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado, muz", "Aile"],
+  ["Bizim Aile", "Günlük tüketim ve aile paylaşımı için dengeli içerik.", "Kumkat, mango, altın çilek, yaban mersini, ejder meyvesi", "Aile"],
+  ["Mega", "Yoğun ürün çeşitliliğiyle premium vitrin paketi.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado", "Mega"],
+  ["Vitamin C", "Narenciye ağırlıklı ferah ve canlı seçki.", "Portakal, mandalina, limon, kumkat, greyfurt", "Vitamin"],
+  ["Business", "Kurumsal sunumlar için dengeli ve prestijli paket.", "Yaban mersini, altın çilek, ejder meyvesi, mango, avokado, kumkat", "Kurumsal"]
 ];
 
 const posts = [
@@ -156,7 +242,6 @@ const recipes = [
 ];
 
 const brandDescription = "Biçer Tropikal, toprağın cömertliğini, güneşin sıcaklığını ve eşsiz lezzetleri sofralarınıza taşıma misyonuyla yola çıkmış bir firmadır. Kuruluşumuzdan bu yana, dünyanın dört bir yanındaki en kaliteli ve en taze tropikal meyveleri titizlikle seçerek, modern ve hijyenik koşullarda işleyip sizlere ulaştırmanın gururunu yaşıyoruz.";
-const localAdminPassword = "BT-local-panel-2026";
 const localAdminHosts = ["", "localhost", "127.0.0.1", "::1"];
 
 const app = document.querySelector("#main");
@@ -225,10 +310,10 @@ function categoryCard(category, text) {
 function home() {
   document.title = "Biçer Tropikal | Tropik Lezzetin Prestij Adresi";
   const categories = [
-    ["Ejder Meyveleri", "Kırmızı, beyaz ve sarı ejder meyvesi seçkileri."],
+    ["Ejder Meyveleri", "Ejder meyvesi ve renkli ejder çeşitleri."],
     ["Tropikal Klasikler", "Mango, avokado ve pamelo gibi güçlü lezzetler."],
     ["Egzotik Seçki", "Kumkat, çarkıfelek, altın çilek ve yıldız meyvesi."],
-    ["Taze Meyveler", "Yaban mersini gibi taze ve kullanımı kolay ürünler."]
+    ["Vitamin C", "Portakal, mandalina, limon, kumkat ve greyfurt."]
   ];
   return `
     <section class="store-hero">
@@ -242,7 +327,7 @@ function home() {
         </div>
       </div>
       <div class="hero-showcase">
-        <img src="assets/bicer-tropikal-logo-horizontal.png" alt="Biçer Tropikal logosu" loading="eager" />
+        <img src="assets/tropical-gift-basket.jpeg" alt="Tropikal meyve hediye paketi" loading="eager" />
       </div>
     </section>
 
@@ -302,7 +387,7 @@ function catalog() {
     <section class="section">
       <div class="toolbar">
         <div class="field"><label for="catalogSearch">Canlı ürün araması</label><input id="catalogSearch" type="search" placeholder="Ejder meyvesi, mango, avokado..." /></div>
-        <div class="field"><label for="categoryFilter">Kategori</label><select id="categoryFilter"><option value="">Tümü</option><option>Ejder Meyveleri</option><option>Tropikal Klasikler</option><option>Egzotik Seçki</option><option>Taze Meyveler</option></select></div>
+        <div class="field"><label for="categoryFilter">Kategori</label><select id="categoryFilter"><option value="">Tümü</option><option>Ejder Meyveleri</option><option>Tropikal Klasikler</option><option>Egzotik Seçki</option><option>Taze Meyveler</option><option>Klasik Meyveler</option><option>Vitamin C</option></select></div>
         <div class="field"><label for="tasteFilter">Tat profili</label><select id="tasteFilter"><option value="">Tümü</option><option>Tatlı</option><option>Ekşi</option><option>Hafif</option><option>Kremamsı</option></select></div>
         <div class="field"><label for="useFilter">Kullanım amacı</label><select id="useFilter"><option value="">Tümü</option><option>Sunum</option><option>Kahvaltı</option><option>Atıştırmalık</option><option>Salata</option><option>Tatlılar</option><option>İçecek</option></select></div>
         <div class="field"><label for="sortFilter">Sıralama</label><select id="sortFilter"><option value="popular">Popüler</option><option value="az">A-Z</option></select></div>
@@ -437,21 +522,7 @@ function notFound() {
 }
 
 function adminPage() {
-  if (!localAdminHosts.includes(location.hostname)) return notFound();
-  const isAdmin = localStorage.getItem("bt-admin") === "ok";
-  if (!isAdmin) {
-    return `${pageHero("Admin Paneli", "Sadece yerel geliştirme ortamında kullanılabilen yönetim alanı.")}<section class="section"><form class="form-card" id="adminLogin"><div class="field"><label for="adminPass">Admin şifresi</label><input id="adminPass" type="password" autocomplete="current-password" /></div><button class="btn primary" type="submit">Giriş</button><p id="adminStatus"></p></form></section>`;
-  }
-  return `
-    ${pageHero("Yönetim Paneli", "Ürün, kategori, blog, galeri ve form mesajları için admin görünümü.")}
-    <section class="section admin-shell">
-      <aside class="admin-menu">
-        ${["Ürün yönetimi", "Kategori yönetimi", "Blog yönetimi", "Galeri yönetimi", "Form mesajları"].map((item, i) => `<button class="${i === 0 ? "active" : ""}" data-admin-tab="${i}">${item}</button>`).join("")}
-        <button id="adminLogout">Çıkış</button>
-      </aside>
-      <div class="admin-card" id="adminContent"></div>
-    </section>
-  `;
+  return notFound();
 }
 
 function renderAdmin(tab = 0) {
@@ -519,10 +590,7 @@ function bindPageEvents() {
   const adminLogin = document.querySelector("#adminLogin");
   if (adminLogin) adminLogin.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (document.querySelector("#adminPass").value === localAdminPassword) {
-      localStorage.setItem("bt-admin", "ok");
-      route();
-    } else document.querySelector("#adminStatus").textContent = "Şifre hatalı.";
+    document.querySelector("#adminStatus").textContent = "Admin paneli güvenlik nedeniyle production statik sitede kapalıdır.";
   });
   renderAdmin();
   document.querySelectorAll("[data-admin-tab]").forEach((button) => button.addEventListener("click", () => {
