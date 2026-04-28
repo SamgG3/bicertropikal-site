@@ -155,10 +155,146 @@ const boxes = [
 ];
 
 const posts = [
-  ["Ejder Meyvesi Çeşitleri Arasındaki Farklar", "Kırmızı, beyaz ve sarı ejder meyvesini tat, doku ve kullanım açısından karşılaştırıyoruz.", "Rehber"],
-  ["Avokado Nasıl Olgunlaştırılır?", "Doğru bekletme, kesim ve saklama adımlarını sade şekilde anlatıyoruz.", "Saklama"],
-  ["Çarkıfelek Nerelerde Kullanılır?", "İçecek, tatlı ve soslarda güçlü aromayı nasıl dengeleyeceğinizi öğrenin.", "Bilgi"],
-  ["Tropikal Sunum İçin Renk Dengesi", "Yıldız meyvesi, kumkat ve altın çilekle premium tabak fikri.", "Sunum"]
+  {
+    slug: "ejder-meyvesi-cesitleri",
+    title: "Ejder Meyvesi Çeşitleri Arasındaki Farklar",
+    excerpt: "Kırmızı, beyaz ve sarı ejder meyvesini tat, doku ve kullanım açısından karşılaştırıyoruz.",
+    tag: "Rehber",
+    image: "assets/blog-ejder.png",
+    related: ["kirmizi-ejder-meyvesi", "beyaz-ejder-meyvesi", "sari-ejder-meyvesi"],
+    intro: "Ejder meyvesi, pitaya adıyla da bilinir ve kırmızı, beyaz, sarı olmak üzere üç ana çeşitte sunulur. Her çeşit, tat yoğunluğu, doku yapısı ve sofradaki kullanım amacı açısından farklı karakter taşır.",
+    sections: [
+      {
+        title: "Kırmızı Ejder Meyvesi",
+        points: [
+          "İç rengi kırmızı veya canlı pembedir.",
+          "Tat profili daha yoğun ve daha tatlı hissedilir.",
+          "Antioksidan değeri daha yüksektir.",
+          "Smoothie, tatlı ve premium sunumlarda güçlü bir görsel etki verir."
+        ]
+      },
+      {
+        title: "Beyaz Ejder Meyvesi",
+        points: [
+          "İç rengi beyazdır.",
+          "Tat profili daha hafif ve daha nötr kalır.",
+          "Günlük tüketim ve salata kullanımında dengeli bir tercih olur."
+        ]
+      },
+      {
+        title: "Sarı Ejder Meyvesi",
+        points: [
+          "Kabuk rengi sarıdır ve dış yüzeyi daha belirgin yapıdadır.",
+          "Genelde en tatlı çeşit olarak öne çıkar.",
+          "Özel ürün segmentinde olduğu için fiyatı çoğu zaman daha yüksektir."
+        ]
+      }
+    ],
+    conclusion: "Daha yoğun tatlılık ve premium deneyim arayanlar için kırmızı veya sarı ejder meyvesi öne çıkar. Daha hafif ve günlük kullanıma uygun bir seçenek isteyenler için beyaz ejder meyvesi dengeli bir seçimdir."
+  },
+  {
+    slug: "avokado-nasil-olgunlastirilir",
+    title: "Avokado Nasıl Olgunlaştırılır? (Hızlı ve Doğru Yöntemler)",
+    excerpt: "Doğru bekletme, kesim ve saklama adımlarını sade şekilde anlatıyoruz.",
+    tag: "Saklama",
+    image: "assets/blog-avokado.png",
+    related: ["avokado"],
+    intro: "Avokado çoğunlukla sert halde satışa sunulur ve doğru yöntemle olgunlaştırıldığında kıvamı, aroması ve kullanım kalitesi belirgin şekilde artar. En iyi sonuç, doğal olgunlaşma sürecine saygı gösteren yöntemlerle alınır.",
+    sections: [
+      {
+        title: "Doğal yöntem",
+        points: [
+          "Avokadoyu oda sıcaklığında 2 ila 4 gün bekletin.",
+          "Direkt güneş görmeyen bir alanda tutun.",
+          "Bu yöntem en dengeli kıvamı verir."
+        ]
+      },
+      {
+        title: "Hızlı yöntem",
+        points: [
+          "Avokadoyu muz veya elma ile birlikte kağıt poşete koyun.",
+          "Doğal etilen gazı sayesinde 1 ila 2 günde daha hızlı olgunlaşır."
+        ]
+      },
+      {
+        title: "Olgun olduğunu nasıl anlarsınız?",
+        points: [
+          "Hafif bastırıldığında nazikçe yumuşar.",
+          "Sap kısmı kolay çıkıyorsa çoğu zaman tüketim olgunluğuna yaklaşmıştır."
+        ]
+      }
+    ],
+    conclusion: "Avokadoyu erken buzdolabına koymak olgunlaşma sürecini yavaşlatır hatta durdurabilir. Önce ideal kıvama gelmesini bekleyip sonra kısa süreli soğuk saklama yapmak en doğru yöntemdir."
+  },
+  {
+    slug: "carkifelek-nerelerde-kullanilir",
+    title: "Çarkıfelek Meyvesi Nerelerde Kullanılır?",
+    excerpt: "İçecek, tatlı ve soslarda güçlü aromayı nasıl dengeleyeceğinizi öğrenin.",
+    tag: "Bilgi",
+    image: "assets/blog-carkifelek.png",
+    related: ["carkifelek", "mango"],
+    intro: "Çarkıfelek meyvesi, ekşi-tatlı yapısı ve aromatik yoğunluğu sayesinde az miktarda kullanıldığında bile tarifin karakterini değiştirebilen güçlü bir tropikal meyvedir.",
+    sections: [
+      {
+        title: "İçeceklerde kullanım",
+        points: [
+          "Smoothie karışımlarında canlı aroma verir.",
+          "Kokteyllerde belirgin tropikal karakter oluşturur.",
+          "Meyve suyu ve ferah içecek tariflerinde güçlü bir temel olur."
+        ]
+      },
+      {
+        title: "Tatlılarda kullanım",
+        points: [
+          "Cheesecake üzerinde sos olarak kullanılabilir.",
+          "Dondurma ile iyi uyum sağlar.",
+          "Tatlı soslarında hem renk hem koku dengesi sunar."
+        ]
+      },
+      {
+        title: "Yemeklerde kullanım",
+        points: [
+          "Et yanında kullanılan hafif meyve soslarında değerlendirilebilir.",
+          "Salata üzerinde asidite ve aroma katkısı sağlar."
+        ]
+      }
+    ],
+    conclusion: "Çarkıfeleğin en büyük avantajı yoğun aroma taşımasıdır. Bu nedenle az kullanımla bile tarifte güçlü ve premium bir etki bırakır."
+  },
+  {
+    slug: "tropikal-sunumda-renk-dengesi",
+    title: "Tropikal Meyve Sunumunda Renk Dengesi Nasıl Olmalı?",
+    excerpt: "Yıldız meyvesi, kumkat ve altın çilekle premium tabak fikri.",
+    tag: "Sunum",
+    image: "assets/blog-renk-dengesi.png",
+    related: ["mango", "kirmizi-ejder-meyvesi", "altin-cilek"],
+    intro: "Tropikal meyve sunumunda görsellik, lezzet kadar önem taşır. Renkler doğru dengelenirse ürünler daha premium görünür, seçki daha düzenli algılanır ve sunum daha iştah açıcı olur.",
+    sections: [
+      {
+        title: "Altın kural",
+        points: [
+          "Aynı tabakta üç ana renk kullanmak çoğu zaman en dengeli sonucu verir.",
+          "Çok fazla renk kullanmak premium hissi zayıflatabilir."
+        ]
+      },
+      {
+        title: "Örnek kombinler",
+        points: [
+          "Sarı mango, kırmızı ejder meyvesi ve yeşil tonlu destek ürünler birlikte güçlü görünür.",
+          "Turuncu, mor ve beyaz dengesi daha modern bir sunum hissi verir."
+        ]
+      },
+      {
+        title: "Sunum ipuçları",
+        points: [
+          "Daha büyük parçaları alt kısma yerleştirin.",
+          "Küçük ve renkli meyveleri üst katmanlarda kullanın.",
+          "Ortaya dikkat çeken bir ürün koyarak göz odağı oluşturun."
+        ]
+      }
+    ],
+    conclusion: "Renk dengesi doğru kurulduğunda tropikal meyve sunumu yalnızca daha şık görünmez; aynı zamanda ürünlerin değeri ve seçkinin bütünlüğü de daha güçlü hissedilir."
+  }
 ];
 
 const recipes = [
@@ -320,6 +456,32 @@ function boxCard(box) {
   return `<article class="box-card">${image}<span class="tag">${box[3]}</span><h3>${box[0]}</h3><p>${box[1]}</p><p><strong>İçerik:</strong> ${box[2]}</p><div class="product-meta"><strong>Fiyat:</strong> 0 TL <span>Stokta yok</span></div><a class="small-link" href="https://wa.me/905537230927?text=${encodeURIComponent(`Merhaba, ${box[0]} hakkında bilgi almak istiyorum. İçerik: ${box[2]}`)}" target="_blank" rel="noreferrer">WhatsApp ile Sor</a></article>`;
 }
 
+function blogCard(post) {
+  return `
+    <article class="blog-card rich-blog-card">
+      <div class="blog-cover"><img src="${post.image}" alt="${post.title}" loading="lazy" /></div>
+      <span class="tag">${post.tag}</span>
+      <h3>${post.title}</h3>
+      <p>${post.excerpt}</p>
+      <a class="small-link" href="#/blog/${post.slug}">Oku</a>
+    </article>
+  `;
+}
+
+function relatedFruitCard(fruit) {
+  return `
+    <article class="related-fruit-card">
+      <div class="related-fruit-media"><img src="${fruit.image}" alt="${fruit.name}" loading="lazy" /></div>
+      <div>
+        <span class="tag">${fruit.category}</span>
+        <h3>${fruit.name}</h3>
+        <p>${fruit.desc}</p>
+        <a class="small-link" href="#/product/${fruit.id}">Ürünü İncele</a>
+      </div>
+    </article>
+  `;
+}
+
 function catalog() {
   return `
     ${pageHero("Ürünlerimiz", "Kategori, tat profili, kullanım amacı ve mevsime göre filtrelenebilen Biçer Tropikal ürün vitrini.")}
@@ -400,6 +562,41 @@ function infoBlock(title, text) {
   return `<div class="info-card"><h3>${title}</h3><p>${text}</p></div>`;
 }
 
+function blogDetail(slug) {
+  const post = posts.find((item) => item.slug === slug) || posts[0];
+  const relatedFruits = post.related.map((id) => state.products.find((item) => item.id === id)).filter(Boolean);
+  const message = encodeURIComponent(`Merhaba, "${post.title}" içeriği hakkında bilgi almak istiyorum.`);
+  return `
+    ${pageHero(post.title, post.excerpt, `Blog / ${post.title}`)}
+    <section class="section detail-layout blog-detail-layout">
+      <article class="detail-panel blog-article">
+        <div class="blog-hero-image"><img src="${post.image}" alt="${post.title}" loading="eager" /></div>
+        <span class="tag">${post.tag}</span>
+        <p class="blog-intro">${post.intro}</p>
+        ${post.sections.map((section) => `
+          <section class="blog-section">
+            <h3>${section.title}</h3>
+            <ul class="blog-points">${section.points.map((point) => `<li>${point}</li>`).join("")}</ul>
+          </section>
+        `).join("")}
+        <div class="info-card blog-summary">
+          <h3>Sonuç</h3>
+          <p>${post.conclusion}</p>
+        </div>
+      </article>
+      <aside class="detail-panel blog-sidebar">
+        <h2>İlgili ürünler</h2>
+        <div class="grid">${relatedFruits.map(relatedFruitCard).join("")}</div>
+        <article class="info-card blog-cta">
+          <h3>Bilgi alın</h3>
+          <p>Bu içerikte geçen ürünler ve sunumlar hakkında detaylı bilgi için bize doğrudan WhatsApp üzerinden ulaşabilirsiniz.</p>
+          <a class="btn primary" href="https://wa.me/905537230927?text=${message}" target="_blank" rel="noreferrer">WhatsApp ile Sor</a>
+        </article>
+      </aside>
+    </section>
+  `;
+}
+
 function about() {
   return `
     ${pageHero("Hakkımızda", aboutHeroDescription, "Hakkımızda", "about-page-hero")}
@@ -440,7 +637,7 @@ function recipesPage() {
 }
 
 function blogPage() {
-  return `${pageHero("Blog", "SEO uyumlu, bilgilendirici ve sade tropikal meyve içerikleri.")}<section class="section"><div class="grid four">${posts.map((p) => `<article class="blog-card"><span class="tag">${p[2]}</span><h3>${p[0]}</h3><p>${p[1]}</p><a class="small-link" href="#/blog">Oku</a></article>`).join("")}</div></section>`;
+  return `${pageHero("Blog", "SEO uyumlu, bilgilendirici ve sade tropikal meyve içerikleri.")}<section class="section"><div class="grid four">${posts.map(blogCard).join("")}</div></section>`;
 }
 
 function faqSection() {
@@ -533,7 +730,7 @@ function renderAdmin(tab = 0) {
   const views = [
     `<table><thead><tr><th>Ürün</th><th>Kategori</th><th>Tat</th><th>Kullanım</th></tr></thead><tbody>${state.products.map((f) => `<tr><td>${f.name}</td><td>${f.category}</td><td>${f.taste}</td><td>${f.use}</td></tr>`).join("")}</tbody></table>`,
     `<table><thead><tr><th>Kategori</th><th>Ürün sayısı</th></tr></thead><tbody>${[...new Set(state.products.map((f) => f.category))].map((c) => `<tr><td>${c}</td><td>${state.products.filter((f) => f.category === c).length}</td></tr>`).join("")}</tbody></table>`,
-    `<table><thead><tr><th>Başlık</th><th>Etiket</th></tr></thead><tbody>${posts.map((p) => `<tr><td>${p[0]}</td><td>${p[2]}</td></tr>`).join("")}</tbody></table>`,
+    `<table><thead><tr><th>Başlık</th><th>Etiket</th></tr></thead><tbody>${posts.map((p) => `<tr><td>${p.title}</td><td>${p.tag}</td></tr>`).join("")}</tbody></table>`,
     `<div class="grid four">${state.products.slice(0, 8).map((f) => `<div class="gallery-tile">${f.icon}</div>`).join("")}</div>`,
     `<table><thead><tr><th>Form mesajları</th></tr></thead><tbody><tr><td>Form mesajları site içinde saklanmaz; kullanıcı WhatsApp'a yönlendirilir.</td></tr></tbody></table>`
   ];
@@ -561,6 +758,7 @@ function route() {
     admin: adminPage
   };
   if (first === "product") app.innerHTML = productDetail(parts[1]);
+  else if (first === "blog" && parts[1]) app.innerHTML = blogDetail(parts[1]);
   else if (first === "legal") app.innerHTML = legalPage(parts[1]);
   else app.innerHTML = (routes[first] || notFound)();
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -669,7 +867,7 @@ function bindGlobalEvents() {
 
 function renderSearch(query) {
   const q = query.toLowerCase();
-  const results = [...state.products.map((f) => ({ title: f.name, text: f.desc, url: `#/product/${f.id}` })), ...posts.map((p) => ({ title: p[0], text: p[1], url: "#/blog" }))].filter((item) => `${item.title} ${item.text}`.toLowerCase().includes(q)).slice(0, 8);
+  const results = [...state.products.map((f) => ({ title: f.name, text: f.desc, url: `#/product/${f.id}` })), ...posts.map((p) => ({ title: p.title, text: p.excerpt, url: `#/blog/${p.slug}` }))].filter((item) => `${item.title} ${item.text}`.toLowerCase().includes(q)).slice(0, 8);
   document.querySelector("#searchResults").innerHTML = results.length ? results.map((r) => `<a class="search-result" href="${r.url}"><strong>${r.title}</strong><p>${r.text}</p></a>`).join("") : emptySearch();
 }
 
