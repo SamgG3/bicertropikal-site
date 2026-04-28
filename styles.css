@@ -656,6 +656,15 @@ p {
   z-index: 1;
 }
 
+.fruit-art img {
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
 .box-photo {
   padding: 0;
 }
@@ -821,6 +830,16 @@ p {
 
 .social-gallery span:first-child {
   grid-row: span 2;
+}
+
+.gallery-tile {
+  overflow: hidden;
+}
+
+.gallery-tile img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .breadcrumb {
@@ -1152,10 +1171,26 @@ p {
   max-width: 860px;
 }
 
-.copyright {
+.footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.62);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   padding: 18px 22px;
+}
+
+.footer-signature {
+  color: rgba(255, 255, 255, 0.42) !important;
+  font-size: 0.72rem;
+  justify-self: start;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.62);
+  grid-column: 2;
   text-align: center;
 }
 

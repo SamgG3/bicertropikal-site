@@ -1,25 +1,105 @@
 const fruits = [
   {
+    id: "avokado",
+    name: "Avokado",
+    icon: "Avokado",
+    image: "assets/avokado.jpeg",
+    category: "Tropikal Klasikler",
+    taste: "Kremamsı",
+    use: "Salata",
+    season: "Yıl boyu",
+    popular: 110,
+    storage: "Sertse oda sıcaklığında olgunlaştırın. Olgunlaştıktan sonra buzdolabında 2-3 gün saklayın. Kesildikten sonra limon sürüp kapalı kapta 1-2 gün içinde tüketin.",
+    desc: "Kremamsı dokusu, dengeli yağ profili ve çok yönlü kullanımıyla sofraların güçlü ürünü."
+  },
+  {
+    id: "carkifelek",
+    name: "Çarkıfelek",
+    icon: "Çarkıfelek",
+    image: "assets/carkifelek.jpeg",
+    category: "Egzotik Seçki",
+    taste: "Ekşi",
+    use: "İçecek",
+    season: "İlkbahar",
+    popular: 109,
+    storage: "Oda sıcaklığında 3-5 gün olgunlaşabilir. Buzdolabında 1-2 hafta saklayın. Kesildikten sonra kapalı kapta 2-3 gün içinde tüketin.",
+    desc: "Keskin kokusu ve tatlı-ekşi dengesiyle içecek, tatlı ve soslarda güçlü aroma verir."
+  },
+  {
+    id: "altin-cilek",
+    name: "Altın Çilek",
+    icon: "Altın Çilek",
+    image: "assets/altin-cilek.jpeg",
+    category: "Egzotik Seçki",
+    taste: "Ekşi",
+    use: "Atıştırmalık",
+    season: "Sonbahar",
+    popular: 108,
+    storage: "Kendi zarında serin ve kuru yerde kısa süre, buzdolabında daha uzun süre korunabilir.",
+    desc: "Tatlı-ekşi dengesi ve zarif görüntüsüyle doğal ürün vitrinlerinde dikkat çeker."
+  },
+  {
     id: "kirmizi-ejder-meyvesi",
     name: "Kırmızı Ejder Meyvesi",
     icon: "Kırmızı Ejder",
+    image: "assets/kirmizi-ejder-meyvesi.jpeg",
     category: "Ejder Meyveleri",
     taste: "Tatlı",
     use: "Sunum",
     season: "Yıl boyu",
-    popular: 99,
+    popular: 107,
     storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Canlı rengi, yumuşak dokusu ve ferah aromasıyla premium tabaklarda öne çıkar."
+  },
+  {
+    id: "mango",
+    name: "Mango",
+    icon: "Mango",
+    image: "assets/mango.jpeg",
+    category: "Tropikal Klasikler",
+    taste: "Tatlı",
+    use: "Tatlılar",
+    season: "Yaz",
+    popular: 106,
+    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-5 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
+    desc: "Yoğun aroması, sulu dokusu ve güneşli lezzetiyle tropikal seçkinin vazgeçilmezidir."
+  },
+  {
+    id: "yildiz-meyvesi",
+    name: "Yıldız Meyvesi",
+    icon: "Yıldız Meyvesi",
+    image: "assets/yildiz-meyvesi.jpeg",
+    category: "Egzotik Seçki",
+    taste: "Hafif",
+    use: "Sunum",
+    season: "Kış",
+    popular: 105,
+    storage: "Oda sıcaklığında kısa süre bekleyebilir. Buzdolabında 5-7 gün saklayın; tüketmeden önce yıkayın.",
+    desc: "Yıldız formu, ince aroması ve dekoratif duruşuyla premium sunumların imzasıdır."
+  },
+  {
+    id: "pamelo",
+    name: "Pamelo",
+    icon: "Pamelo",
+    image: "assets/pamelo.jpeg",
+    category: "Tropikal Klasikler",
+    taste: "Hafif",
+    use: "Salata",
+    season: "Kış",
+    popular: 104,
+    storage: "Bütün halde serin yerde saklanabilir; soyulduktan sonra kapalı kapta tutulmalıdır.",
+    desc: "Narenciye ailesinin iri, aromatik ve ferahlatıcı premium üyelerindendir."
   },
   {
     id: "beyaz-ejder-meyvesi",
     name: "Beyaz Ejder Meyvesi",
     icon: "Beyaz Ejder",
+    image: "assets/beyaz-ejder-meyvesi.jpeg",
     category: "Ejder Meyveleri",
     taste: "Hafif",
     use: "Sunum",
     season: "Yıl boyu",
-    popular: 96,
+    popular: 103,
     storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Dengeli, sade ve ferah lezzetiyle tropikal meyve deneyimine zarif bir giriş sunar."
   },
@@ -27,204 +107,51 @@ const fruits = [
     id: "sari-ejder-meyvesi",
     name: "Sarı Ejder Meyvesi",
     icon: "Sarı Ejder",
+    image: "assets/sari-ejder-meyvesi.jpeg",
     category: "Ejder Meyveleri",
     taste: "Tatlı",
     use: "Atıştırmalık",
     season: "Yıl boyu",
-    popular: 94,
+    popular: 102,
     storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
     desc: "Daha yoğun tatlılığı ve özel kabuk yapısıyla seçkin tropikal ürünler arasındadır."
-  },
-  {
-    id: "ejder-meyvesi",
-    name: "Ejder Meyvesi",
-    icon: "Ejder Meyvesi",
-    category: "Ejder Meyveleri",
-    taste: "Hafif",
-    use: "Sunum",
-    season: "Yıl boyu",
-    popular: 98,
-    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-7 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
-    desc: "Paketlerde dengeli görünüm ve ferah lezzet veren tropikal ürün ailesidir."
-  },
-  {
-    id: "yaban-mersini",
-    name: "Yaban Mersini",
-    icon: "Yaban Mersini",
-    category: "Taze Meyveler",
-    taste: "Tatlı",
-    use: "Kahvaltı",
-    season: "Yaz",
-    popular: 92,
-    storage: "Yıkamadan saklayın. Buzdolabında 5-10 gün taze kalabilir; tüketmeden hemen önce yıkayın.",
-    desc: "Kahvaltı kaseleri, tatlılar ve ferah tabaklar için güçlü, doğal bir tamamlayıcıdır."
-  },
-  {
-    id: "altin-cilek",
-    name: "Altın Çilek",
-    icon: "Altın Çilek",
-    category: "Egzotik Seçki",
-    taste: "Ekşi",
-    use: "Atıştırmalık",
-    season: "Sonbahar",
-    popular: 88,
-    storage: "Kendi zarında serin ve kuru yerde kısa süre, buzdolabında daha uzun süre korunabilir.",
-    desc: "Tatlı-ekşi dengesi ve zarif görüntüsüyle doğal ürün vitrinlerinde dikkat çeker."
-  },
-  {
-    id: "pamelo",
-    name: "Pamelo",
-    icon: "Pamelo",
-    category: "Tropikal Klasikler",
-    taste: "Hafif",
-    use: "Salata",
-    season: "Kış",
-    popular: 86,
-    storage: "Bütün halde serin yerde saklanabilir; soyulduktan sonra kapalı kapta tutulmalıdır.",
-    desc: "Narenciye ailesinin iri, aromatik ve ferahlatıcı premium üyelerindendir."
-  },
-  {
-    id: "nar",
-    name: "Nar",
-    icon: "Nar",
-    category: "Klasik Meyveler",
-    taste: "Tatlı",
-    use: "Sunum",
-    season: "Kış",
-    popular: 89,
-    storage: "Bütün halde serin yerde, ayıklandıktan sonra kapalı kapta buzdolabında saklanmalıdır.",
-    desc: "Rengi ve taneli dokusuyla paketlere canlılık ve güçlü sunum etkisi katar."
-  },
-  {
-    id: "muz",
-    name: "Muz",
-    icon: "Muz",
-    category: "Klasik Meyveler",
-    taste: "Tatlı",
-    use: "Atıştırmalık",
-    season: "Yıl boyu",
-    popular: 87,
-    storage: "Oda sıcaklığında saklanmalı; fazla olgunlaşınca serin ortamda kısa süre korunmalıdır.",
-    desc: "Aile paketlerinde doyurucu, tanıdık ve kolay tüketilen tamamlayıcı meyvedir."
-  },
-  {
-    id: "avokado",
-    name: "Avokado",
-    icon: "Avokado",
-    category: "Tropikal Klasikler",
-    taste: "Kremamsı",
-    use: "Salata",
-    season: "Yıl boyu",
-    popular: 95,
-    storage: "Sertse oda sıcaklığında olgunlaştırın. Olgunlaştıktan sonra buzdolabında 2-3 gün saklayın. Kesildikten sonra limon sürüp kapalı kapta 1-2 gün içinde tüketin.",
-    desc: "Kremamsı dokusu, dengeli yağ profili ve çok yönlü kullanımıyla sofraların güçlü ürünü."
-  },
-  {
-    id: "mango",
-    name: "Mango",
-    icon: "Mango",
-    category: "Tropikal Klasikler",
-    taste: "Tatlı",
-    use: "Tatlılar",
-    season: "Yaz",
-    popular: 97,
-    storage: "Olgunlaşmamışsa oda sıcaklığında bekletin. Olgunlaştıktan sonra buzdolabında 3-5 gün saklayın. Kesildikten sonra kapalı kapta 1-2 gün içinde tüketin.",
-    desc: "Yoğun aroması, sulu dokusu ve güneşli lezzetiyle tropikal seçkinin vazgeçilmezidir."
   },
   {
     id: "kumkat",
     name: "Kumkat",
     icon: "Kumkat",
+    image: "assets/kumkat.jpeg",
     category: "Egzotik Seçki",
     taste: "Ekşi",
     use: "Sunum",
     season: "Kış",
-    popular: 82,
+    popular: 101,
     storage: "Buzdolabında nemini koruyacak şekilde saklanmalı, kısa sürede tüketilmelidir.",
     desc: "Kabuğuyla tüketilebilen aromatik yapısı sayesinde sunumlarda canlı bir etki oluşturur."
   },
   {
-    id: "carkifelek",
-    name: "Çarkıfelek",
-    icon: "Çarkıfelek",
-    category: "Egzotik Seçki",
-    taste: "Ekşi",
-    use: "İçecek",
-    season: "İlkbahar",
-    popular: 93,
-    storage: "Oda sıcaklığında 3-5 gün olgunlaşabilir. Buzdolabında 1-2 hafta saklayın. Kesildikten sonra kapalı kapta 2-3 gün içinde tüketin.",
-    desc: "Keskin kokusu ve tatlı-ekşi dengesiyle içecek, tatlı ve soslarda güçlü aroma verir."
-  },
-  {
-    id: "yildiz-meyvesi",
-    name: "Yıldız Meyvesi",
-    icon: "Yıldız Meyvesi",
-    category: "Egzotik Seçki",
-    taste: "Hafif",
-    use: "Sunum",
-    season: "Kış",
-    popular: 80,
-    storage: "Oda sıcaklığında kısa süre bekleyebilir. Buzdolabında 5-7 gün saklayın; tüketmeden önce yıkayın.",
-    desc: "Yıldız formu, ince aroması ve dekoratif duruşuyla premium sunumların imzasıdır."
-  },
-  {
-    id: "portakal",
-    name: "Portakal",
-    icon: "Portakal",
-    category: "Vitamin C",
+    id: "yaban-mersini",
+    name: "Yaban Mersini",
+    icon: "Yaban Mersini",
+    image: "assets/yaban-mersini.jpeg",
+    category: "Taze Meyveler",
     taste: "Tatlı",
-    use: "İçecek",
-    season: "Kış",
-    popular: 86,
-    storage: "Serin ve kuru yerde saklanabilir; sıkıldıktan sonra bekletmeden tüketilmelidir.",
-    desc: "Vitamin C paketinin ferah, sulu ve klasik narenciye temelidir."
-  },
-  {
-    id: "mandalina",
-    name: "Mandalina",
-    icon: "Mandalina",
-    category: "Vitamin C",
-    taste: "Tatlı",
-    use: "Atıştırmalık",
-    season: "Kış",
-    popular: 84,
-    storage: "Serin yerde saklanmalı, kabuğu yumuşamadan tüketilmelidir.",
-    desc: "Kolay soyulan yapısı ve canlı aromasıyla narenciye seçkisini tamamlar."
-  },
-  {
-    id: "limon",
-    name: "Limon",
-    icon: "Limon",
-    category: "Vitamin C",
-    taste: "Ekşi",
-    use: "İçecek",
-    season: "Yıl boyu",
-    popular: 82,
-    storage: "Buzdolabında daha uzun süre taze kalır; kesildikten sonra kapalı kapta tutulmalıdır.",
-    desc: "İçecek, salata ve taze sunumlarda aromayı keskinleştiren temel üründür."
-  },
-  {
-    id: "greyfurt",
-    name: "Greyfurt",
-    icon: "Greyfurt",
-    category: "Vitamin C",
-    taste: "Ekşi",
-    use: "İçecek",
-    season: "Kış",
-    popular: 80,
-    storage: "Serin yerde saklanabilir; dilimlendikten sonra buzdolabına alınmalıdır.",
-    desc: "Hafif buruk aromasıyla Vitamin C seçkisine karakterli bir lezzet verir."
+    use: "Kahvaltı",
+    season: "Yaz",
+    popular: 100,
+    storage: "Yıkamadan saklayın. Buzdolabında 5-10 gün taze kalabilir; tüketmeden hemen önce yıkayın.",
+    desc: "Kahvaltı kaseleri, tatlılar ve ferah tabaklar için güçlü, doğal bir tamamlayıcıdır."
   }
 ];
 
 const boxes = [
-  ["Ekonomik Paket", "Tropikal keşfe dengeli ve pratik başlangıç.", "Ejder meyvesi, avokado, altın çilek, yaban mersini", "Ekonomik", "assets/ekonomik-paket-box.jpeg"],
-  ["Sevdiğine Gönder", "Hediye hissi güçlü, renkli ve özenli seçki.", "Yaban mersini, altın çilek, kumkat, ejder meyvesi, mango, pamelo", "Hediye", "assets/sevdigine-gonder-box.jpeg"],
-  ["Geniş Aile", "Kalabalık sofralar için zengin ve paylaşılabilir paket.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado, muz", "Aile", "assets/genis-aile-box.jpeg"],
-  ["Bizim Aile", "Günlük tüketim ve aile paylaşımı için dengeli içerik.", "Kumkat, mango, altın çilek, yaban mersini, ejder meyvesi", "Aile", "assets/bizim-aile-box.jpeg"],
-  ["Mega", "Yoğun ürün çeşitliliğiyle premium vitrin paketi.", "Ejder meyvesi, kumkat, mango, nar, altın çilek, yaban mersini, avokado", "Mega", "assets/mega-paket-box.jpeg"],
+  ["Ekonomik Paket", "Tropikal keşfe dengeli ve pratik başlangıç.", "Kırmızı ejder meyvesi, avokado, altın çilek, yaban mersini", "Ekonomik", "assets/ekonomik-paket-box.jpeg"],
+  ["Sevdiğine Gönder", "Hediye hissi güçlü, renkli ve özenli seçki.", "Yaban mersini, altın çilek, kumkat, kırmızı ejder meyvesi, mango, pamelo", "Hediye", "assets/sevdigine-gonder-box.jpeg"],
+  ["Geniş Aile", "Kalabalık sofralar için zengin ve paylaşılabilir paket.", "Kırmızı ejder meyvesi, kumkat, mango, altın çilek, yaban mersini, avokado", "Aile", "assets/genis-aile-box.jpeg"],
+  ["Bizim Aile", "Günlük tüketim ve aile paylaşımı için dengeli içerik.", "Kumkat, mango, altın çilek, yaban mersini, beyaz ejder meyvesi", "Aile", "assets/bizim-aile-box.jpeg"],
+  ["Mega", "Yoğun ürün çeşitliliğiyle premium vitrin paketi.", "Sarı ejder meyvesi, kumkat, mango, altın çilek, yaban mersini, avokado", "Mega", "assets/mega-paket-box.jpeg"],
   ["Vitamin C", "Narenciye ağırlıklı ferah ve canlı seçki.", "Portakal, mandalina, limon, kumkat, greyfurt", "Vitamin", "assets/vitamin-c-box.jpeg"],
-  ["Business", "Kurumsal sunumlar için dengeli ve prestijli paket.", "Yaban mersini, altın çilek, ejder meyvesi, mango, avokado, kumkat", "Kurumsal", "assets/business-box.jpeg"]
+  ["Business", "Kurumsal sunumlar için dengeli ve prestijli paket.", "Yaban mersini, altın çilek, kırmızı ejder meyvesi, mango, avokado, kumkat", "Kurumsal", "assets/business-box.jpeg"]
 ];
 
 const posts = [
@@ -278,11 +205,18 @@ function stars() {
   return `<div class="stars" aria-label="5 yıldız">★★★★★</div>`;
 }
 
+function fruitVisual(fruit, className = "fruit-art") {
+  const media = fruit.image
+    ? `<img src="${fruit.image}" alt="${fruit.name}" loading="lazy" />`
+    : `<span>${fruit.icon}</span>`;
+  return `<div class="${className}" aria-hidden="true">${media}</div>`;
+}
+
 function fruitCard(fruit) {
   return `
     <article class="fruit-card product-card">
       <a class="quick-view" href="#/product/${fruit.id}">Hızlı İncele</a>
-      <div class="fruit-art" aria-hidden="true"><span>${fruit.icon}</span></div>
+      ${fruitVisual(fruit)}
       <span class="tag">${fruit.category}</span>
       <h3>${fruit.name}</h3>
       ${stars()}
@@ -317,7 +251,7 @@ function home() {
     ["Ejder Meyveleri", "Ejder meyvesi ve renkli ejder çeşitleri."],
     ["Tropikal Klasikler", "Mango, avokado ve pamelo gibi güçlü lezzetler."],
     ["Egzotik Seçki", "Kumkat, çarkıfelek, altın çilek ve yıldız meyvesi."],
-    ["Vitamin C", "Portakal, mandalina, limon, kumkat ve greyfurt."]
+    ["Taze Meyveler", "Yaban mersini gibi günlük tüketime uygun seçkiler."]
   ];
   return `
     <section class="store-hero">
@@ -392,7 +326,7 @@ function catalog() {
     <section class="section">
       <div class="toolbar">
         <div class="field"><label for="catalogSearch">Canlı ürün araması</label><input id="catalogSearch" type="search" placeholder="Ejder meyvesi, mango, avokado..." /></div>
-        <div class="field"><label for="categoryFilter">Kategori</label><select id="categoryFilter"><option value="">Tümü</option><option>Ejder Meyveleri</option><option>Tropikal Klasikler</option><option>Egzotik Seçki</option><option>Taze Meyveler</option><option>Klasik Meyveler</option><option>Vitamin C</option></select></div>
+        <div class="field"><label for="categoryFilter">Kategori</label><select id="categoryFilter"><option value="">Tümü</option><option>Ejder Meyveleri</option><option>Tropikal Klasikler</option><option>Egzotik Seçki</option><option>Taze Meyveler</option></select></div>
         <div class="field"><label for="tasteFilter">Tat profili</label><select id="tasteFilter"><option value="">Tümü</option><option>Tatlı</option><option>Ekşi</option><option>Hafif</option><option>Kremamsı</option></select></div>
         <div class="field"><label for="useFilter">Kullanım amacı</label><select id="useFilter"><option value="">Tümü</option><option>Sunum</option><option>Kahvaltı</option><option>Atıştırmalık</option><option>Salata</option><option>Tatlılar</option><option>İçecek</option></select></div>
         <div class="field"><label for="sortFilter">Sıralama</label><select id="sortFilter"><option value="popular">Popüler</option><option value="az">A-Z</option></select></div>
@@ -428,7 +362,7 @@ function productDetail(id) {
     ${pageHero(fruit.name, fruit.desc, `Ürünlerimiz / ${fruit.name}`)}
     <section class="section detail-layout">
       <div class="detail-panel">
-        <div class="fruit-art"><span>${fruit.icon}</span></div>
+        ${fruitVisual(fruit)}
         <span class="tag">${fruit.category}</span>
         <h2>${fruit.name}</h2>
         ${stars()}
@@ -456,11 +390,9 @@ function productDetail(id) {
 }
 
 function nutritionProfile(fruit) {
-  if (fruit.category === "Vitamin C") return { highlight: "C vitamini", fiber: "Sulu narenciye", note: "İçecek ve ferah tüketim" };
   if (fruit.name === "Avokado") return { highlight: "Sağlıklı yağ", fiber: "Kremamsı yapı", note: "Salata ve kahvaltı" };
   if (fruit.name.includes("Yaban")) return { highlight: "Antioksidan", fiber: "Küçük taneli", note: "Kase ve tatlı" };
   if (fruit.name.includes("Ejder")) return { highlight: "Su oranı", fiber: "Ferah doku", note: "Sunum ve tabak" };
-  if (fruit.name === "Nar") return { highlight: "Polifenol", fiber: "Taneli yapı", note: "Paket ve sunum" };
   return { highlight: "Doğal aroma", fiber: "Dengeli yapı", note: fruit.use };
 }
 
@@ -500,7 +432,7 @@ function boxesPage() {
 }
 
 function guidePage() {
-  return `${pageHero("Saklama Rehberi", "Meyveleri doğru zamanda tüketmek için pratik ve sade saklama önerileri.")}<section class="section grid">${state.products.map((f) => `<article class="guide-row"><div class="fruit-art"><span>${f.icon}</span></div><div><h3>${f.name}</h3><p>${f.storage}</p></div><span class="tag">${f.season}</span></article>`).join("")}</section>`;
+  return `${pageHero("Saklama Rehberi", "Meyveleri doğru zamanda tüketmek için pratik ve sade saklama önerileri.")}<section class="section grid">${state.products.map((f) => `<article class="guide-row">${fruitVisual(f)}<div><h3>${f.name}</h3><p>${f.storage}</p></div><span class="tag">${f.season}</span></article>`).join("")}</section>`;
 }
 
 function recipesPage() {
@@ -522,7 +454,7 @@ function faqSection() {
 }
 
 function galleryPage() {
-  return `${pageHero("Galeri", "Gerçek ürün görselleri sonradan eklenecek şekilde hazırlanmış premium galeri alanı.")}<section class="section"><div class="grid four">${state.products.slice(0, 8).map((f) => `<div class="gallery-tile">${f.icon}<span class="sr-only">${f.name}</span></div>`).join("")}</div></section>`;
+  return `${pageHero("Galeri", "Gerçek ürün görselleri sonradan eklenecek şekilde hazırlanmış premium galeri alanı.")}<section class="section"><div class="grid four">${state.products.slice(0, 8).map((f) => `<div class="gallery-tile">${f.image ? `<img src="${f.image}" alt="${f.name}" loading="lazy" />` : f.icon}<span class="sr-only">${f.name}</span></div>`).join("")}</div></section>`;
 }
 
 function contactPage(corporate = false) {
